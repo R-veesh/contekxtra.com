@@ -1,0 +1,108 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: $color-dark;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  padding-left: $rail-width;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.7s $ease-in-out;
+  pointer-events: none;
+
+  &.is-open {
+    clip-path: inset(0 0 0 0);
+    pointer-events: auto;
+  }
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, 1vw, 10px);
+  }
+
+  &__link {
+    @include display(2rem, 4.2rem);
+    color: rgba(255, 255, 255, 0.55);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 14px;
+    transition:
+      color 0.4s $ease-out,
+      transform 0.5s $ease-out;
+    opacity: 0;
+    transform: translateY(24px);
+    @include focus-ring;
+
+    .is-open & {
+      opacity: 1;
+      transform: none;
+      transition:
+        opacity 0.6s $ease-out var(--delay, 0s),
+        transform 0.6s $ease-out var(--delay, 0s),
+        color 0.3s $ease-out;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+
+    span {
+      font-family: $font-body;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: $color-accent;
+    }
+  }
+
+  &__aside {
+    border-left: 1px solid $color-line-dark;
+    padding-left: clamp(20px, 3vw, 44px);
+    display: grid;
+    gap: 26px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.66);
+
+    strong {
+      display: block;
+      color: $color-white;
+      font-family: $font-body;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+  }
+
+  @include below($bp-md) {
+    padding-left: 0;
+    padding-top: 68px;
+    align-items: flex-start;
+    overflow-y: auto;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      padding-block: 40px;
+    }
+
+    &__aside {
+      border-left: 0;
+      border-top: 1px solid $color-line-dark;
+      padding-left: 0;
+      padding-top: 26px;
+    }
+  }
+}

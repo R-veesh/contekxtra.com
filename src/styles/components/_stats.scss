@@ -1,0 +1,79 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+
+  &__media {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 16px;
+  }
+
+  &__shot {
+    @include card-media;
+
+    &:first-child {
+      height: clamp(280px, 40vw, 460px);
+    }
+    &:last-child {
+      height: clamp(200px, 30vw, 340px);
+      align-self: end;
+    }
+
+    &:hover img {
+      transform: scale(1.06);
+    }
+  }
+
+  &__copy p {
+    color: $color-ink-soft;
+    margin-top: 18px;
+    max-width: 52ch;
+  }
+
+  @include below($bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 3vw, 40px);
+  margin-top: clamp(48px, 7vw, 90px);
+
+  &__item {
+    display: grid;
+    gap: 4px;
+  }
+
+  &__value {
+    font-family: $font-display;
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: flex-start;
+
+    sup {
+      font-size: 0.42em;
+      color: $color-accent;
+      margin-left: 4px;
+      top: 0.2em;
+    }
+  }
+
+  &__label {
+    font-size: 0.88rem;
+    color: $color-muted;
+  }
+
+  @include below($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,90 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+  background: $color-dark;
+  color: rgba(255, 255, 255, 0.72);
+  padding-top: clamp(50px, 7vw, 90px);
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(2, 0.8fr);
+    gap: clamp(26px, 4vw, 60px);
+    padding-bottom: clamp(36px, 5vw, 60px);
+  }
+
+  &__pitch {
+    max-width: 34ch;
+    font-size: 0.95rem;
+  }
+
+  &__brand {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  &__col-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 16px;
+  }
+
+  &__links {
+    display: grid;
+    gap: 10px;
+    font-size: 0.92rem;
+
+    a {
+      transition: color 0.3s $ease-out;
+      @include focus-ring;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__wordmark {
+    font-family: $font-display;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(2.4rem, 13vw, 11rem);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.24);
+    text-align: center;
+    user-select: none;
+  }
+
+  &__bottom {
+    border-top: 1px solid $color-line-dark;
+    margin-top: clamp(24px, 4vw, 46px);
+    padding-block: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+  }
+
+  @include below($bp-md) {
+    &__top {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include below($bp-xs) {
+    &__top {
+      grid-template-columns: 1fr;
+    }
+  }
+}

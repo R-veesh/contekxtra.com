@@ -1,0 +1,65 @@
+@use "variables" as *;
+
+@mixin below($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin above($bp) {
+  @media (min-width: $bp + 1px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-inline: $gutter;
+}
+
+@mixin display($min, $max) {
+  font-family: $font-display;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-size: clamp(#{$min}, 6vw, #{$max});
+}
+
+@mixin eyebrow {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: $color-accent;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+    border-radius: $radius-sm;
+  }
+}
+
+@mixin card-media {
+  overflow: hidden;
+  border-radius: $radius-lg;
+  background: $color-canvas-alt;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s $ease-out;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

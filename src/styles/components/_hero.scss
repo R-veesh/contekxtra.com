@@ -1,0 +1,113 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 20px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 4vw, 60px);
+  padding: clamp(90px, 10vw, 130px) $gutter clamp(40px, 6vw, 70px);
+
+  &__copy {
+    max-width: 620px;
+    margin-left: auto;
+    padding-right: clamp(10px, 3vw, 46px);
+  }
+
+  &__kicker {
+    font-family: $font-display;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: $color-ink-soft;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    @include display(3rem, 7rem);
+    margin: 0;
+
+    em {
+      font-style: normal;
+      color: $color-accent;
+    }
+  }
+
+  &__lede {
+    margin-top: 26px;
+    max-width: 46ch;
+    color: $color-ink-soft;
+    display: flex;
+    gap: 12px;
+
+    &::before {
+      content: "";
+      flex: 0 0 34px;
+      height: 1px;
+      background: $color-ink;
+      margin-top: 14px;
+    }
+  }
+
+  &__actions {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__scroll-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $color-muted;
+  }
+
+  &__media {
+    @include card-media;
+    height: min(78vh, 720px);
+    border-radius: $radius-xl;
+  }
+
+  &__badge {
+    position: absolute;
+    left: clamp(16px, 3vw, 48px);
+    bottom: clamp(16px, 3vw, 40px);
+    font-family: $font-display;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $color-muted;
+  }
+
+  @include below($bp-lg) {
+    grid-template-columns: 1fr;
+    min-height: auto;
+
+    &__copy {
+      margin-left: 0;
+      padding-right: 0;
+    }
+
+    &__media {
+      height: min(60vh, 520px);
+    }
+
+    &__badge {
+      display: none;
+    }
+  }
+
+  @include below($bp-sm) {
+    &__lede::before {
+      display: none;
+    }
+
+    &__actions {
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.quotes {
+  background: $color-canvas-alt;
+
+  &__inner {
+    display: grid;
+    gap: 30px;
+  }
+
+  &__mark {
+    font-family: $font-display;
+    font-size: 4rem;
+    line-height: 0.6;
+    color: $color-accent;
+  }
+
+  &__text {
+    font-family: $font-display;
+    font-size: clamp(1.2rem, 2.6vw, 2.1rem);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    max-width: 24ch;
+    min-height: 4.5em;
+    transition: opacity 0.4s $ease-out;
+
+    &.is-swapping {
+      opacity: 0;
+    }
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__author {
+    font-weight: 700;
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: $color-muted;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid $color-muted;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background 0.3s $ease-out,
+      transform 0.3s $ease-out;
+    @include focus-ring;
+
+    &.is-active {
+      background: $color-accent;
+      border-color: $color-accent;
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.btn {
+  --btn-bg: #{$color-accent};
+  --btn-fg: #{$color-white};
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: $radius-pill;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: $font-body;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.4s $ease-out,
+    box-shadow 0.4s $ease-out;
+  @include focus-ring;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.16);
+    transform: translateY(101%);
+    transition: transform 0.45s $ease-out;
+  }
+
+  span,
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(240, 82, 59, 0.28);
+  }
+
+  &:hover::after {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  &--ghost {
+    --btn-bg: transparent;
+    --btn-fg: #{$color-ink};
+    border: 1px solid $color-line;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+.circle-btn {
+  width: 62px;
+  height: 62px;
+  border-radius: $radius-pill;
+  border: 1px solid $color-line;
+  background: transparent;
+  color: $color-ink;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    background 0.4s $ease-out,
+    color 0.4s $ease-out,
+    transform 0.4s $ease-out;
+  @include focus-ring;
+
+  &:hover {
+    background: $color-accent;
+    border-color: $color-accent;
+    color: $color-white;
+    transform: translateY(3px);
+  }
+}

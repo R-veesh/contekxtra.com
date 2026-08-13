@@ -1,0 +1,43 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.logos {
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 26px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: clamp(12px, 2.4vw, 34px) clamp(16px, 3vw, 46px);
+    align-items: center;
+  }
+
+  &__item {
+    font-family: $font-display;
+    font-size: clamp(0.85rem, 1.4vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $color-muted;
+    opacity: 0.6;
+    text-align: center;
+    transition:
+      opacity 0.35s $ease-out,
+      color 0.35s $ease-out,
+      transform 0.35s $ease-out;
+
+    &:hover {
+      opacity: 1;
+      color: $color-ink;
+      transform: translateY(-3px);
+    }
+  }
+
+  @include below($bp-md) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
