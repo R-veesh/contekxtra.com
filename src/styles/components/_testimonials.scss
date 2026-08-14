@@ -1,77 +1,84 @@
 @use "../variables" as *;
 @use "../mixins" as *;
 
-.quotes {
+.testimonials {
   background: $color-canvas-alt;
 
-  &__inner {
+  .section-title {
+    max-width: 25ch;
+  }
+
+  &__grid {
     display: grid;
-    gap: 30px;
-  }
-
-  &__mark {
-    font-family: $font-display;
-    font-size: 4rem;
-    line-height: 0.6;
-    color: $color-accent;
-  }
-
-  &__text {
-    font-family: $font-display;
-    font-size: clamp(1.2rem, 2.6vw, 2.1rem);
-    font-weight: 500;
-    line-height: 1.28;
-    letter-spacing: -0.02em;
-    max-width: 24ch;
-    min-height: 4.5em;
-    transition: opacity 0.4s $ease-out;
-
-    &.is-swapping {
-      opacity: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    
+    @include below($bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include below($bp-sm) {
+      grid-template-columns: 1fr;
     }
   }
+}
 
-  &__foot {
+.testimonial-card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+
+  &__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 16px;
   }
 
-  &__author {
-    font-weight: 700;
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    
+    strong {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: $color-ink;
+      line-height: 1.2;
+    }
+    
     span {
-      display: block;
-      font-weight: 400;
       font-size: 0.85rem;
       color: $color-muted;
     }
   }
 
-  &__dots {
-    display: flex;
-    gap: 10px;
+  &__quote {
+    font-size: 0.95rem;
+    color: $color-ink-soft;
+    line-height: 1.6;
+    flex-grow: 1;
   }
 
-  &__dot {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    border-radius: 50%;
-    border: 1px solid $color-muted;
-    background: transparent;
-    cursor: pointer;
-    transition:
-      background 0.3s $ease-out,
-      transform 0.3s $ease-out;
-    @include focus-ring;
-
-    &.is-active {
-      background: $color-accent;
-      border-color: $color-accent;
-      transform: scale(1.2);
+  &__stars {
+    display: flex;
+    gap: 4px;
+    color: $color-dark;
+    
+    svg {
+      width: 16px;
+      height: 16px;
     }
   }
 }

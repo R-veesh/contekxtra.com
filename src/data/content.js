@@ -211,19 +211,43 @@ export const testimonials = [
     quote:
       "ContekXtra transformed how our research teams find information. What used to take hours of digging through fragmented systems now takes seconds with precise contextual answers.",
     author: "Robert Miller",
-    role: "VP of Research, GlobalTech",
+    role: "VP of Research",
+    image: team1,
   },
   {
     quote:
       "Unlike traditional enterprise search that just gives you a list of links, ContekXtra actually understands the relationships between our data sources.",
     author: "Amanda Hughes",
-    role: "Chief Knowledge Officer, InnoSystems",
+    role: "Chief Knowledge Officer",
+    image: team2,
   },
   {
     quote:
       "The Semantic Retrieval capabilities have reduced our support resolution times by 40%. Our agents have the exact organizational context they need instantly.",
     author: "David Chang",
-    role: "Head of Operations, Nexus Corp",
+    role: "Head of Operations",
+    image: team3,
+  },
+  {
+    quote:
+      "It's rare to find a platform that is both strategically powerful and incredibly easy to deploy. ContekXtra gave us both.",
+    author: "Martin Gomez",
+    role: "Brand Consultant",
+    image: team4,
+  },
+  {
+    quote:
+      "Every step was thoughtfully executed. They asked the right questions from day one and delivered beyond our expectations.",
+    author: "Rachel Faye",
+    role: "Operations Manager",
+    image: team5,
+  },
+  {
+    quote:
+      "We've seen a massive uptick in team engagement and productivity since launching. The time saved is just incredible.",
+    author: "Sarah Lin",
+    role: "Customer Success",
+    image: team6,
   },
 ];
 
