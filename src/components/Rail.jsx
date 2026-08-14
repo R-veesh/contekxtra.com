@@ -43,6 +43,8 @@ export default function Rail({ open, onToggle }) {
 
 export function Menu({ open, onClose }) {
   const [mounted, setMounted] = useState(false);
+  const [activeId, setActiveId] = useState("");
+
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
@@ -56,23 +58,49 @@ export function Menu({ open, onClose }) {
     };
   }, [open, onClose]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px" }
+    );
+
+    navLinks.forEach((link) => {
+      if (link.href.startsWith("#")) {
+        const id = link.href.substring(1);
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, [mounted]);
+
   return (
     <div id="site-menu" className={`menu${open ? " is-open" : ""}`} aria-hidden={!open}>
       <div className="menu__inner">
         <nav className="menu__list" aria-label="Primary">
-          {navLinks.map((link, i) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="menu__link"
-              style={{ "--delay": `${0.08 * i + 0.15}s` }}
-              tabIndex={open && mounted ? 0 : -1}
-              onClick={onClose}
-            >
-              <span>{String(i + 1).padStart(2, "0")}</span>
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link, i) => {
+            const isActive = activeId === link.href.substring(1);
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`menu__link ${isActive ? "is-active" : ""}`}
+                style={{ "--delay": `${0.08 * i + 0.15}s` }}
+                tabIndex={open && mounted ? 0 : -1}
+                onClick={onClose}
+              >
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
         <div className="menu__aside">
           <div>
