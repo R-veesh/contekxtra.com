@@ -1,5 +1,4 @@
 import { projects } from "@/data/content";
-import { ArrowUpRight } from "./icons";
 import Reveal from "./Reveal";
 
 export default function Projects() {
@@ -13,20 +12,32 @@ export default function Projects() {
 
         <div className="projects__grid">
           {projects.map((project, i) => (
-            <Reveal key={project.id} delay={i * 80}>
+            <Reveal 
+              key={project.id} 
+              delay={i * 80} 
+              className="project-card-wrapper"
+              style={{ '--index': i }}
+            >
               <a className="project-card" href="#contact">
-                <span className="project-card__media">
+                <div className="project-card__media">
                   <img src={project.image} alt={project.alt} loading="lazy" />
-                  <span className="project-card__overlay">
-                    <span className="project-card__chip">
-                      View project <ArrowUpRight size={14} />
-                    </span>
+                  <div className="project-card__overlay"></div>
+                </div>
+                
+                <div className="project-card__content">
+                  <span className="project-card__pill">{project.meta}</span>
+                  <h3 className="project-card__title">{project.title}</h3>
+                </div>
+                
+                <div className="project-card__view">
+                  <span className="project-card__view-text">View</span>
+                  <span className="project-card__view-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
                   </span>
-                </span>
-                <span className="project-card__foot">
-                  <span className="project-card__title">{project.title}</span>
-                  <span className="project-card__meta">{project.meta}</span>
-                </span>
+                </div>
               </a>
             </Reveal>
           ))}
