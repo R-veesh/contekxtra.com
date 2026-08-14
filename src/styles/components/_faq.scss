@@ -1,0 +1,134 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.faq {
+  background: $color-white;
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: start;
+    
+    @include below($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__sticky {
+    position: sticky;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section-title {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    max-width: 15ch;
+  }
+
+  &__media {
+    border-radius: $radius-xl;
+    overflow: hidden;
+    position: relative;
+    max-width: 400px;
+    
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    // A little custom shape like the screenshot
+    border-top-left-radius: 80px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 24px 0;
+    font-family: $font-body;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $color-ink;
+    cursor: pointer;
+    gap: 20px;
+    @include focus-ring;
+    
+    span:first-child {
+      flex: 1;
+      padding-right: 20px;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid $color-muted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-ink;
+    transition: transform 0.3s $ease-out, border-color 0.3s;
+    
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__item.is-open {
+    .faq__icon {
+      transform: rotate(45deg);
+      border-color: $color-ink;
+    }
+    .faq__question {
+      color: $color-ink;
+    }
+  }
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s $ease-out;
+  }
+
+  &__item.is-open &__answer {
+    grid-template-rows: 1fr;
+  }
+
+  &__answer-inner {
+    overflow: hidden;
+    
+    p {
+      padding-bottom: 24px;
+      color: $color-ink-soft;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}

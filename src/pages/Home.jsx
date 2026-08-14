@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing";
 import Documentation from "@/components/Documentation";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
+import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import "@/styles/main.scss";
@@ -36,6 +37,7 @@ export default function Home() {
           <Documentation />
           <Team />
           <Testimonials />
+          <Faq />
           <Contact />
         </main>
         <Footer />

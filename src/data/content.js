@@ -333,3 +333,35 @@ export const pricingPlans = [
     cta: "Request Custom Quote",
   },
 ];
+
+export const faq = {
+  eyebrow: "{ FAQ }",
+  title: "CLEAR SOLUTIONS TO YOUR CONCERNS",
+  image: about1,
+  questions: [
+    {
+      q: "What is included in the ContekXtra platform?",
+      a: "Our platform includes the core Context Engine, Semantic Search capabilities, Intelligent Knowledge Assistant, and our proprietary Enterprise Knowledge Graph mapping."
+    },
+    {
+      q: "How long does it take to deploy?",
+      a: "Depending on the complexity and number of data sources, a standard deployment takes between 2 to 6 weeks, including data ingestion and initial semantic mapping."
+    },
+    {
+      q: "Do you offer mobile-friendly interfaces?",
+      a: "Yes, our web interfaces and API integrations are fully responsive and designed to work seamlessly across desktop, tablet, and mobile devices."
+    },
+    {
+      q: "Can you integrate with our existing databases?",
+      a: "Absolutely. We offer over 150 out-of-the-box connectors for popular enterprise systems including Salesforce, SharePoint, Jira, Confluence, and custom SQL/NoSQL databases."
+    },
+    {
+      q: "Do you provide custom AI model fine-tuning?",
+      a: "Yes, for our Enterprise plan customers we offer dedicated AI model fine-tuning to better understand your specific industry jargon and organizational terminology."
+    },
+    {
+      q: "Will our data remain secure and private?",
+      a: "Security is our top priority. We offer SOC2 Type II compliance, end-to-end encryption, and on-premise deployment options for organizations with strict data residency requirements."
+    }
+  ]
+};
