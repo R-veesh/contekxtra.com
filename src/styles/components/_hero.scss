@@ -27,8 +27,10 @@
   }
 
   &__title {
-    @include display(3rem, 7rem);
+    @include display(2.5rem, 5.5rem);
     margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
 
     em {
       font-style: normal;
