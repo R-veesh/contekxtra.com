@@ -1,0 +1,120 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.newsletter {
+  padding-bottom: $space-section;
+
+  &__card {
+    background: $color-dark;
+    border-radius: $radius-xl;
+    padding: clamp(40px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    color: $color-white;
+
+    @include below($bp-md) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    .eyebrow {
+      color: $color-accent;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: rgba($color-white, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 480px;
+
+    @include below($bp-md) {
+      margin: 0 auto;
+    }
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 12px;
+    
+    @include below($bp-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    background: rgba($color-white, 0.05);
+    border: 1px solid rgba($color-white, 0.1);
+    border-radius: $radius-pill;
+    padding: 16px 24px;
+    color: $color-white;
+    font-size: 1rem;
+    font-family: $font-body;
+    transition: all 0.3s $ease-out;
+    outline: none;
+
+    &::placeholder {
+      color: rgba($color-white, 0.4);
+    }
+
+    &:focus {
+      border-color: $color-accent;
+      background: rgba($color-white, 0.08);
+    }
+  }
+
+  &__submit {
+    background: $color-accent;
+    color: $color-white;
+    border: none;
+    border-radius: $radius-pill;
+    padding: 16px 36px;
+    font-size: 1rem;
+    font-family: $font-body;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s $ease-out;
+    white-space: nowrap;
+
+    &:hover {
+      background: $color-accent-dark;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__disclaimer {
+    font-size: 0.85rem;
+    color: rgba($color-white, 0.5);
+
+    a {
+      color: rgba($color-white, 0.8);
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}

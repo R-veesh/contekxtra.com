@@ -11,6 +11,7 @@ import Documentation from "@/components/Documentation";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import "@/styles/main.scss";
@@ -38,6 +39,7 @@ export default function Home() {
           <Team />
           <Testimonials />
           <Faq />
+          <Newsletter />
           <Contact />
         </main>
         <Footer />
