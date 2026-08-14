@@ -14,10 +14,10 @@ export default function Hero() {
           <p className="hero__lede">{hero.lede}</p>
           <div className="hero__actions">
             <a className="btn" href="#contact">
-              <span>Start a project</span>
+              <span>Request a Demo</span>
               <ArrowUpRight />
             </a>
-            <a className="circle-btn" href="#services" aria-label="Scroll to services">
+            <a className="circle-btn" href="#capabilities" aria-label="Scroll to capabilities">
               <ArrowDown />
             </a>
             <span className="hero__scroll-label">Scroll to explore</span>
@@ -29,7 +29,7 @@ export default function Hero() {
         <img src={hero.image} alt={hero.imageAlt} />
       </Reveal>
 
-      <span className="hero__badge">Est. 2015 — San Francisco</span>
+      <span className="hero__badge">Global Headquarters — San Francisco</span>
     </section>
   );
 }

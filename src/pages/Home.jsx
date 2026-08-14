@@ -5,6 +5,9 @@ import Services from "@/components/Services";
 import About, { Logos } from "@/components/About";
 import Projects from "@/components/Projects";
 import Process from "@/components/Process";
+import TechShowcase from "@/components/TechShowcase";
+import Pricing from "@/components/Pricing";
+import Documentation from "@/components/Documentation";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -28,6 +31,9 @@ export default function Home() {
           <Logos />
           <Projects />
           <Process />
+          <TechShowcase />
+          <Pricing />
+          <Documentation />
           <Team />
           <Testimonials />
           <Contact />

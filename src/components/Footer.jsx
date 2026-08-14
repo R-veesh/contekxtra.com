@@ -10,8 +10,7 @@ export default function Footer() {
               {brand.name}
             </a>
             <p className="footer__pitch">
-              {brand.tagline} building brands, websites and campaigns for teams who care about
-              craft.
+              {brand.tagline} building intelligent solutions for organizations who care about context.
             </p>
           </div>
           {footerColumns.map((col) => (

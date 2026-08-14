@@ -20,242 +20,292 @@ import team5 from "@/assets/team-5.jpg";
 import team6 from "@/assets/team-6.jpg";
 
 export const brand = {
-  name: "Brightedge",
-  tagline: "Digital design studio",
-  email: "studio@brightedge.example",
-  phone: "+1 (415) 555 0142",
-  address: "24 Harbour Lane, Suite 900, San Francisco",
+  name: "ContekXtra",
+  tagline: "Enterprise Context Intelligence",
+  email: "enterprise@contekxtra.com",
+  phone: "+1 (800) 555 0199",
+  address: "Global Headquarters, San Francisco",
 };
 
 export const navLinks = [
   { label: "Home", href: "#top" },
-  { label: "Services", href: "#services" },
-  { label: "Studio", href: "#studio" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "Team", href: "#team" },
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "Platform", href: "#platform" },
+  { label: "Solutions", href: "#solutions" },
+  { label: "Pipeline", href: "#pipeline" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const hero = {
-  kicker: "Digital design",
-  title: "Creators",
-  lede: "Beautiful design has the power to move people — we build brands and digital products that carry that weight from first pixel to final launch.",
+  kicker: "ContekXtra",
+  title: "Enterprise Knowledge, Understood in Context",
+  lede: "Unify fragmented enterprise knowledge, understand contextual relationships between information sources, and deliver relevant intelligence through AI-powered retrieval.",
   image: heroMain,
-  imageAlt: "Brushed aluminium and matte white tiles arranged in a grid",
+  imageAlt: "Abstract neural network and context relationship visualization",
 };
 
 export const marqueeItems = [
-  "Brand systems",
-  "Digital products",
-  "Motion design",
-  "Art direction",
-  "Web experiences",
-  "Growth strategy",
+  "Context Intelligence",
+  "Semantic Retrieval",
+  "Knowledge Graph",
+  "AI Discovery",
+  "Enterprise Search",
+  "Contextual Answers",
 ];
 
 export const services = [
   {
-    id: "branding",
-    name: "Branding",
-    tag: "Identity",
+    id: "context-engine",
+    name: "Context Intelligence Engine",
+    tag: "Core AI",
     image: service1,
     description:
-      "Positioning, naming and visual identity systems built to survive scale — from the first sketch to a documented brand library.",
-    points: ["Brand strategy & narrative", "Logo & identity systems", "Guidelines and asset kits"],
+      "Creates contextual relationships across all your enterprise information, transforming siloed data into a unified, intelligent knowledge layer.",
+    points: ["Contextual data analysis", "Knowledge relationship mapping", "Semantic understanding", "Information classification"],
   },
   {
-    id: "web-design",
-    name: "Web Design",
-    tag: "UI / UX",
+    id: "knowledge-retrieval",
+    name: "Enterprise Knowledge Retrieval",
+    tag: "Search",
     image: service2,
     description:
-      "Interfaces designed around real behaviour: clear hierarchy, deliberate motion and layouts that hold up on every screen size.",
-    points: ["Research & wireframes", "Design systems in Figma", "Prototyping & usability testing"],
+      "Enables users to find relevant organizational information instantly using natural language, with results ranked by contextual relevance rather than keyword matching.",
+    points: ["Natural-language search", "Semantic retrieval", "Context-aware results", "Source discovery"],
   },
   {
-    id: "development",
-    name: "Development",
-    tag: "Coding",
+    id: "knowledge-assistant",
+    name: "Intelligent Knowledge Assistant",
+    tag: "Interface",
     image: service3,
     description:
-      "Fast, accessible front-ends and reliable integrations. We ship code that your team can actually maintain after handover.",
-    points: ["React & headless builds", "Performance engineering", "CMS and API integration"],
+      "Helps employees interact with organizational knowledge through contextual Q&A, summarizing complex topics and providing verifiable source links.",
+    points: ["Contextual Q&A", "Information summarization", "Source-aware responses", "Follow-up discovery"],
   },
   {
-    id: "marketing",
-    name: "Marketing",
-    tag: "Integrations",
+    id: "knowledge-graph",
+    name: "Enterprise Knowledge Graph",
+    tag: "Architecture",
     image: service4,
     description:
-      "Campaign systems, analytics and content pipelines that turn a beautiful launch into measurable, compounding growth.",
-    points: ["SEO & content systems", "Lifecycle campaigns", "Analytics & reporting"],
+      "Maps the complex relationships between information, processes, teams, and organizational resources to provide a complete picture of your business.",
+    points: ["Relationship mapping", "Entity discovery", "Connected information views", "Context visualization"],
   },
 ];
 
 export const about = {
-  eyebrow: "{ About the studio }",
-  title: "A small team obsessed with the details others skip",
+  eyebrow: "{ Platform Overview }",
+  title: "Transform fragmented enterprise information into a connected intelligence environment",
   body: [
-    "Brightedge is an independent design practice working with founders and in-house teams who care about craft. We keep the group deliberately small so the people you meet are the people doing the work.",
-    "Every engagement starts with the same question: what should this product feel like the moment someone lands on it? Everything after that — the type, the motion, the copy — answers it.",
+    "Modern organizations maintain information across documents, knowledge bases, databases, applications, internal portals, and operational systems. Finding the right information and understanding its context can be difficult when these sources operate independently.",
+    "ContekXtra provides an intelligent contextual retrieval layer that connects enterprise knowledge, processes information relationships, and surfaces relevant intelligence based on user intent.",
   ],
   images: [
-    { src: about1, alt: "Designers collaborating around a bright studio table" },
-    { src: about2, alt: "Overhead view of colour swatches and a tablet on a desk" },
+    { src: about1, alt: "Dashboard showing connected knowledge sources" },
+    { src: about2, alt: "Semantic search interface displaying contextual answers" },
   ],
 };
 
 export const stats = [
-  { value: 10, suffix: "+", label: "Years Experience" },
-  { value: 500, suffix: "+", label: "Projects Done" },
-  { value: 140, suffix: "+", label: "Happy Clients" },
-  { value: 98, suffix: "%", label: "Satisfied Clients" },
+  { value: 150, suffix: "+", label: "Connectors Available" },
+  { value: 10, suffix: "M+", label: "Queries Processed Daily" },
+  { value: 99, suffix: "%", label: "Contextual Accuracy" },
+  { value: 65, suffix: "%", label: "Reduced Search Time" },
 ];
 
 export const clientLogos = [
-  "Northwind",
-  "Kestrel",
-  "Lumen",
-  "Vantage",
-  "Orbit",
-  "Solace",
-  "Pinnacle",
-  "Everly",
-  "Cobalt",
-  "Meridian",
-  "Ashford",
-  "Halo",
+  "Acme Corp",
+  "Globex",
+  "Soylent",
+  "Initech",
+  "Umbrella",
+  "Massive Dynamic",
+  "Stark Ind",
+  "Wayne Ent",
+  "Cyberdyne",
+  "Tyrell",
+  "Weyland",
+  "Oscorp",
 ];
 
 export const projects = [
   {
-    id: "perfect-frame",
-    title: "The Perfect Frame",
-    meta: "Branding — 2025",
+    id: "knowledge-teams",
+    title: "Enterprise Knowledge Teams",
+    meta: "Curation & Discovery",
     image: project1,
-    alt: "Handcrafted eyewear displayed on a beige pedestal",
+    alt: "Knowledge management dashboard",
   },
   {
-    id: "appflow",
-    title: "AppFlow",
-    meta: "Product design — 2025",
+    id: "business-analysts",
+    title: "Business Analysts",
+    meta: "Research & Insights",
     image: project2,
-    alt: "Fintech mobile app interface on a blue gradient background",
+    alt: "Data analysis and reporting interface",
   },
   {
-    id: "verdant",
-    title: "Verdant Goods",
-    meta: "Identity — 2024",
+    id: "it-operations",
+    title: "IT & Operations",
+    meta: "Infrastructure & Support",
     image: project3,
-    alt: "Green branded stationery and packaging flat lay",
+    alt: "System architecture mapping",
   },
   {
-    id: "signal-xr",
-    title: "Signal XR",
-    meta: "Campaign — 2024",
+    id: "customer-support",
+    title: "Customer Support Organizations",
+    meta: "Rapid Resolution",
     image: project4,
-    alt: "Person wearing a VR headset lit with red and blue light",
+    alt: "Support agent intelligence interface",
   },
 ];
 
 export const processSteps = [
   {
     num: "1",
-    title: "Discovery",
-    text: "We map the business, the audience and the constraints before a single frame is drawn.",
+    title: "Knowledge Ingestion",
+    text: "Securely connect your enterprise documents, databases, portals, and applications.",
     image: process2,
-    alt: "Two designers reviewing sticky notes on a glass wall",
+    alt: "Data connection architecture",
   },
   {
     num: "2",
-    title: "Strategy",
-    text: "Positioning, messaging and a project roadmap that everyone signs off on.",
+    title: "Semantic Processing",
+    text: "Our engine processes the ingested data, extracting meaning beyond simple keywords.",
     image: process3,
-    alt: "Hands typing code on a laptop next to a second monitor",
+    alt: "AI processing visualization",
   },
   {
     num: "3",
-    title: "Design",
-    text: "Concepts, then a full system — typography, colour, motion and component library.",
+    title: "Context Understanding",
+    text: "We map relationships between entities to understand how information is connected.",
     image: process1,
-    alt: "Person in an orange jacket working on a laptop against an orange backdrop",
+    alt: "Knowledge graph visualization",
   },
   {
     num: "4",
-    title: "Build",
-    text: "Front-end engineering with performance and accessibility as acceptance criteria.",
+    title: "Retrieval Intelligence",
+    text: "When a user queries the system, we retrieve not just the document, but the contextual answer.",
     image: process3,
-    alt: "Close-up of a developer working on code",
+    alt: "Search interface with highlighted answers",
   },
   {
     num: "5",
-    title: "Delivering Success",
-    text: "After a seamless launch we stay on for support and optimisation so results keep compounding.",
+    title: "Business Decisions",
+    text: "Empower your teams to make faster, more accurate decisions based on complete organizational intelligence.",
     image: process1,
-    alt: "Creative professional working outdoors on a bright set",
+    alt: "Dashboard showing business metrics",
   },
 ];
 
 export const team = [
-  { name: "Michael Rivera", role: "Brand Strategist", image: team1, alt: "Portrait of Michael Rivera" },
-  { name: "Emily Carter", role: "Creative Director", image: team2, alt: "Portrait of Emily Carter" },
-  { name: "Sarah Johnson", role: "Web Designer", image: team3, alt: "Portrait of Sarah Johnson" },
-  { name: "Jason Lee", role: "Front-End Engineer", image: team4, alt: "Portrait of Jason Lee" },
-  { name: "Anna Martinez", role: "Digital Marketing", image: team5, alt: "Portrait of Anna Martinez" },
-  { name: "David Brown", role: "Motion Designer", image: team6, alt: "Portrait of David Brown" },
+  { name: "Dr. Elena Rostova", role: "Chief AI Scientist", image: team1, alt: "Portrait of Elena Rostova" },
+  { name: "Marcus Chen", role: "VP of Engineering", image: team2, alt: "Portrait of Marcus Chen" },
+  { name: "Sarah Jenkins", role: "Head of Enterprise Solutions", image: team3, alt: "Portrait of Sarah Jenkins" },
+  { name: "David Alby", role: "Lead Architect", image: team4, alt: "Portrait of David Alby" },
+  { name: "Priya Patel", role: "Director of Product", image: team5, alt: "Portrait of Priya Patel" },
+  { name: "James Wilson", role: "Customer Success Lead", image: team6, alt: "Portrait of James Wilson" },
 ];
 
 export const testimonials = [
   {
     quote:
-      "They rebuilt our identity and site in eleven weeks and our demo requests doubled the month after launch.",
-    author: "Priya Raman",
-    role: "Founder, Northwind Labs",
+      "ContekXtra transformed how our research teams find information. What used to take hours of digging through fragmented systems now takes seconds with precise contextual answers.",
+    author: "Robert Miller",
+    role: "VP of Research, GlobalTech",
   },
   {
     quote:
-      "The most organised design partner we have worked with. Nothing was handed over half-finished.",
-    author: "Tom Alvarez",
-    role: "Head of Product, Kestrel",
+      "Unlike traditional enterprise search that just gives you a list of links, ContekXtra actually understands the relationships between our data sources.",
+    author: "Amanda Hughes",
+    role: "Chief Knowledge Officer, InnoSystems",
   },
   {
     quote:
-      "Every detail was considered — the motion, the copy, even the empty states. It feels expensive in the best way.",
-    author: "Dana Whitfield",
-    role: "CMO, Lumen",
+      "The Semantic Retrieval capabilities have reduced our support resolution times by 40%. Our agents have the exact organizational context they need instantly.",
+    author: "David Chang",
+    role: "Head of Operations, Nexus Corp",
   },
 ];
 
 export const contact = {
-  eyebrow: "{ Get in touch }",
-  title: "Let's start your project today",
+  eyebrow: "{ Request a Demo }",
+  title: "Experience Context Intelligence",
   person: {
-    name: "Michael Bridges",
-    role: `CEO, ${brand.name}`,
-    avatar: team1,
+    name: "Sarah Jenkins",
+    role: `Head of Enterprise Solutions, ContekXtra`,
+    avatar: team3,
   },
-  bio: "At Brightedge we believe in building meaningful digital experiences. If you have questions or need guidance, I'm here to help — your success is our mission.",
-  serviceOptions: ["Branding", "Web Design", "Development", "Marketing", "Something else"],
+  bio: "Ready to unlock your enterprise knowledge? Contact our team for a tailored demonstration of how ContekXtra can connect your organizational data.",
+  serviceOptions: ["Platform Demo", "Technical Integration Discussion", "Enterprise Licensing", "Partner Program", "Other"],
 };
 
 export const footerColumns = [
   {
-    title: "Studio",
+    title: "Platform",
     links: [
-      { label: "Services", href: "#services" },
-      { label: "Our work", href: "#work" },
-      { label: "Process", href: "#process" },
-      { label: "Team", href: "#team" },
+      { label: "Capabilities", href: "#capabilities" },
+      { label: "Architecture", href: "#pipeline" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "Documentation", href: "#" },
     ],
   },
   {
-    title: "Connect",
+    title: "Company",
     links: [
-      { label: "Contact", href: "#contact" },
-      { label: "Instagram", href: "#contact" },
-      { label: "LinkedIn", href: "#contact" },
-      { label: "Behance", href: "#contact" },
+      { label: "Contact Sales", href: "#contact" },
+      { label: "About Us", href: "#" },
+      { label: "Privacy Policy", href: "#" },
+      { label: "Terms of Service", href: "#" },
     ],
+  },
+];
+
+export const pricingPlans = [
+  {
+    id: "starter",
+    name: "Starter",
+    price: "$999",
+    period: "/month",
+    description: "Perfect for departmental knowledge teams starting their context journey.",
+    features: [
+      "Up to 5 data sources",
+      "100,000 queries per month",
+      "Standard semantic retrieval",
+      "Email support",
+    ],
+    highlight: false,
+    cta: "Start Free Trial",
+  },
+  {
+    id: "professional",
+    name: "Professional",
+    price: "$3,499",
+    period: "/month",
+    description: "For organizations scaling context intelligence across multiple divisions.",
+    features: [
+      "Up to 25 data sources",
+      "Unlimited queries",
+      "Advanced Knowledge Graph mapping",
+      "Intelligent Knowledge Assistant",
+      "Priority 24/7 support",
+    ],
+    highlight: true,
+    cta: "Contact Sales",
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "Dedicated infrastructure and unlimited scale for global enterprises.",
+    features: [
+      "Unlimited data sources",
+      "Dedicated processing instances",
+      "Custom AI model fine-tuning",
+      "On-premise deployment options",
+      "Dedicated Success Manager",
+    ],
+    highlight: false,
+    cta: "Request Custom Quote",
   },
 ];

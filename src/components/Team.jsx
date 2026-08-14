@@ -9,8 +9,8 @@ export default function Team() {
     <section className="section team" id="team">
       <div className="container">
         <Reveal className="section-head">
-          <span className="eyebrow">{"{ The people }"}</span>
-          <h2 className="section-title">The team behind the work</h2>
+          <span className="eyebrow">{"{ Leadership }"}</span>
+          <h2 className="section-title">The team behind ContekXtra</h2>
         </Reveal>
 
         <div className="team__grid">

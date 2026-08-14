@@ -22,7 +22,7 @@ export default function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section className="section section--tight quotes">
+    <section className="section section--tight quotes" id="testimonials">
       <div className="container">
         <Reveal className="quotes__inner">
           <span className="quotes__mark" aria-hidden="true">

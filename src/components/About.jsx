@@ -23,7 +23,7 @@ function Stat({ value, suffix, label, delay }) {
 
 export default function About() {
   return (
-    <section className="section" id="studio">
+    <section className="section" id="platform">
       <div className="container">
         <div className="about">
           <Reveal variant="left" className="about__media">
@@ -58,7 +58,7 @@ export function Logos() {
     <section className="section section--tight logos">
       <div className="container">
         <Reveal>
-          <p className="logos__title">Trusted by teams at</p>
+          <p className="logos__title">Trusted by innovative enterprise teams at</p>
           <div className="logos__grid">
             {clientLogos.map((name) => (
               <span className="logos__item" key={name}>

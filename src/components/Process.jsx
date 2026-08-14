@@ -34,11 +34,11 @@ export default function Process() {
   }, []);
 
   return (
-    <section className="section process" id="process">
+    <section className="section process" id="pipeline">
       <div className="container">
         <Reveal className="section-head">
-          <span className="eyebrow">{"{ How we work }"}</span>
-          <h2 className="section-title">A process with no black boxes</h2>
+          <span className="eyebrow">{"{ Architecture Pipeline }"}</span>
+          <h2 className="section-title">How ContekXtra processes your knowledge</h2>
         </Reveal>
 
         <div className="process__track" ref={trackRef}>

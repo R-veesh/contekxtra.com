@@ -1,0 +1,76 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.docs {
+  .section-head {
+    text-align: center;
+  }
+}
+
+.docs__grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+  margin-bottom: 48px;
+
+  @include above($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include above($bp-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.doc-card {
+  display: block;
+  background: rgba(26, 26, 26, 0.4);
+  border: 1px solid $color-line;
+  border-radius: $radius-md;
+  padding: 24px;
+  position: relative;
+  transition: transform 0.3s $ease-out, background 0.3s $ease-out, border-color 0.3s $ease-out;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(26, 26, 26, 0.8);
+    border-color: $color-line-dark;
+
+    .doc-card__icon {
+      transform: translate(2px, -2px);
+      color: $color-accent;
+    }
+  }
+}
+
+.doc-card__title {
+  display: block;
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: $color-ink;
+  margin-bottom: 8px;
+}
+
+.doc-card__desc {
+  display: block;
+  font-size: 0.9rem;
+  color: $color-ink-soft;
+}
+
+.doc-card__icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: $color-muted;
+  transition: transform 0.3s $ease-out, color 0.3s $ease-out;
+}
+
+.docs__coming-soon {
+  text-align: center;
+  color: $color-ink-soft;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}

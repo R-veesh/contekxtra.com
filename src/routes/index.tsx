@@ -4,17 +4,17 @@ import Home from "@/pages/Home";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Brightedge — Digital Design Studio for Brands & Products" },
+      { title: "ContekXtra — Enterprise Context Intelligence" },
       {
         name: "description",
         content:
-          "Brightedge is a digital design studio crafting brand identities, websites, development and marketing systems for ambitious teams.",
+          "ContekXtra enables organizations to unify fragmented enterprise knowledge, understand contextual relationships between information sources, and deliver relevant intelligence.",
       },
-      { property: "og:title", content: "Brightedge — Digital Design Studio" },
+      { property: "og:title", content: "ContekXtra — Enterprise Context Intelligence" },
       {
         property: "og:description",
         content:
-          "Branding, web design, development and marketing from an independent studio obsessed with craft.",
+          "ContekXtra enables organizations to unify fragmented enterprise knowledge, understand contextual relationships between information sources, and deliver relevant intelligence.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

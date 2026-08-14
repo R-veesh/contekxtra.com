@@ -4,11 +4,11 @@ import Reveal from "./Reveal";
 
 export default function Projects() {
   return (
-    <section className="section projects" id="work">
+    <section className="section projects" id="solutions">
       <div className="container">
         <Reveal className="section-head">
-          <span className="eyebrow">{"{ Selected work }"}</span>
-          <h2 className="section-title">Projects we are proud to sign</h2>
+          <span className="eyebrow">{"{ Enterprise Solutions }"}</span>
+          <h2 className="section-title">Designed for modern knowledge organizations</h2>
         </Reveal>
 
         <div className="projects__grid">

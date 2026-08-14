@@ -134,7 +134,7 @@ export default function Contact() {
                   className="form__textarea"
                   value={values.message}
                   onChange={update("message")}
-                  placeholder="Tell us about the project, timeline and budget."
+                  placeholder="Tell us about your organization's knowledge challenges..."
                   aria-invalid={!!errors.message}
                 />
                 {errors.message ? <span className="form__error">{errors.message}</span> : null}

@@ -17,11 +17,11 @@ export default function Services() {
   const hoveredService = services.find((s) => s.id === hovered);
 
   return (
-    <section className="section services" id="services" onMouseMove={onMove}>
+    <section className="section services" id="capabilities" onMouseMove={onMove}>
       <div className="container">
         <Reveal className="section-head">
-          <span className="eyebrow">{"{ What we do }"}</span>
-          <h2 className="section-title">Services built around your next launch</h2>
+          <span className="eyebrow">{"{ Platform Capabilities }"}</span>
+          <h2 className="section-title">Context Intelligence Engine</h2>
         </Reveal>
 
         <div className="services__list">
