@@ -106,11 +106,12 @@
 
   &__view {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    top: 0;
+    left: 0;
+    transform: translate(calc(var(--mouse-x, -100px) - 50%), calc(var(--mouse-y, -100px) - 50%)) scale(0.5);
     opacity: 0;
     z-index: 3;
+    pointer-events: none;
     
     width: 90px;
     height: 90px;
@@ -127,7 +128,7 @@
     
     transition:
       opacity 0.4s $ease-out,
-      transform 0.4s $ease-out;
+      transform 0.15s linear;
       
     &-text {
       font-size: 0.8rem;
@@ -154,7 +155,7 @@
     }
     .project-card__view {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%)) scale(1);
     }
   }
 }
