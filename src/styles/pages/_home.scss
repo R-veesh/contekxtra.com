@@ -15,7 +15,7 @@
   position: relative;
 
   &--tight {
-    padding-block: clamp(48px, 6vw, 90px);
+    padding-block: clamp(32px, 4vw, 64px);
   }
 
   &--dark {
