@@ -29,7 +29,7 @@
   overflow: hidden;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(26, 26, 26, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 
   &:hover {
     transform: translateY(-4px);
@@ -38,7 +38,7 @@
 
   &--highlight {
     border-color: $color-accent;
-    background: rgba(40, 30, 20, 0.6);
+    background: rgba(250, 240, 230, 0.6);
 
     &::before {
       content: "";
