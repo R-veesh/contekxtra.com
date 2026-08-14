@@ -3,7 +3,8 @@
 
 .tech-showcase {
   text-align: center;
-  padding-block: clamp(48px, 8vw, 96px);
+  padding-top: clamp(48px, 8vw, 96px);
+  padding-bottom: clamp(24px, 4vw, 48px);
 }
 
 .tech-showcase__inner {

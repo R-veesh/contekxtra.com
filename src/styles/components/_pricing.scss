@@ -2,6 +2,8 @@
 @use "../mixins" as *;
 
 .pricing {
+  padding-top: clamp(32px, 5vw, 64px);
+
   .section-head {
     text-align: center;
 
