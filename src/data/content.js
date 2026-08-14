@@ -57,7 +57,7 @@ export const marqueeItems = [
 export const services = [
   {
     id: "context-engine",
-    name: "Context Intelligence Engine",
+    name: "Context Engine",
     tag: "Core AI",
     image: service1,
     description:
@@ -66,7 +66,7 @@ export const services = [
   },
   {
     id: "knowledge-retrieval",
-    name: "Enterprise Knowledge Retrieval",
+    name: "Semantic Search",
     tag: "Search",
     image: service2,
     description:
@@ -75,7 +75,7 @@ export const services = [
   },
   {
     id: "knowledge-assistant",
-    name: "Intelligent Knowledge Assistant",
+    name: "AI Assistant",
     tag: "Interface",
     image: service3,
     description:
@@ -84,7 +84,7 @@ export const services = [
   },
   {
     id: "knowledge-graph",
-    name: "Enterprise Knowledge Graph",
+    name: "Knowledge Graph",
     tag: "Architecture",
     image: service4,
     description:

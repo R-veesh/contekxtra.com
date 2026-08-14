@@ -21,7 +21,7 @@ export default function Services() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">{"{ Platform Capabilities }"}</span>
-          <h2 className="section-title">Context Intelligence Engine</h2>
+          <h2 className="section-title">Core Features</h2>
         </Reveal>
 
         <div className="services__list">
