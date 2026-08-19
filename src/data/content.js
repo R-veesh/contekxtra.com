@@ -22,7 +22,7 @@ import team6 from "@/assets/team-6.jpg";
 export const brand = {
   name: "ContekXtra",
   tagline: "Enterprise Context Intelligence",
-  email: "enterprise@contekxtra.com",
+  email: "info@contekxtra.com",
   phone: "+1 (800) 555 0199",
   address: "Global Headquarters, San Francisco",
 };
