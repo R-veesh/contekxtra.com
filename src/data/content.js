@@ -133,30 +133,37 @@ export const projects = [
   {
     id: "knowledge-teams",
     title: "Enterprise Knowledge Teams",
-    meta: "Curation & Discovery",
+    meta: "Knowledge Discovery",
     image: project1,
     alt: "Knowledge management dashboard",
   },
   {
     id: "business-analysts",
-    title: "Business Analysts",
-    meta: "Research & Insights",
+    title: "Business and Research Teams",
+    meta: "Contextual Analysis",
     image: project2,
     alt: "Data analysis and reporting interface",
   },
   {
     id: "it-operations",
     title: "IT & Operations",
-    meta: "Infrastructure & Support",
+    meta: "Operational Knowledge",
     image: project3,
     alt: "System architecture mapping",
   },
   {
     id: "customer-support",
-    title: "Customer Support Organizations",
-    meta: "Rapid Resolution",
+    title: "Customer Support Teams",
+    meta: "Support Intelligence",
     image: project4,
     alt: "Support agent intelligence interface",
+  },
+  {
+    id: "enterprise-data",
+    title: "Enterprise Data Teams",
+    meta: "Connected Data Context",
+    image: process1,
+    alt: "Connected enterprise data mapping",
   },
 ];
 

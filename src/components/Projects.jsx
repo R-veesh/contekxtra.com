@@ -51,7 +51,7 @@ export default function Projects() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">{"{ Enterprise Solutions }"}</span>
-          <h2 className="section-title">Designed for modern knowledge organizations</h2>
+          <h2 className="section-title">DESIGNED FOR MODERN KNOWLEDGE ORGANIZATIONS</h2>
         </Reveal>
 
         <div className="projects__grid">
