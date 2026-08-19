@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-dist-static
+
 .output
 .vinxi
 .tanstack/**
@@ -31,3 +31,6 @@ dist-static
 *.njsproj
 *.sln
 *.sw?
+
+# Static site deployment / Vinxi build output
+dist-static/
