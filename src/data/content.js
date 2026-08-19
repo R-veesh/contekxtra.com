@@ -41,9 +41,9 @@ export const navLinks = [
 export const hero = {
   kicker: "ContekXtra",
   title: "ENTERPRISE KNOWLEDGE, UNDERSTOOD IN CONTEXT",
-  lede: "",
-  image: heroMain, Stop searching.Start discovering.ContekXtra links fragmented enterprise information, recognizes context based relationships and presents your teams with necessary intelligence.
-    imageAlt: "Abstract neural network and context relationship visualization",
+  lede: "Stop searching.Start discovering.ContekXtra links fragmented enterprise information, recognizes context based relationships and presents your teams with necessary intelligence.",
+  image: heroMain,
+  imageAlt: "Abstract neural network and context relationship visualization",
 };
 
 export const marqueeItems = [
