@@ -38,7 +38,7 @@ export default function Process() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">{"{ Architecture Pipeline }"}</span>
-          <h2 className="section-title">How ContekXtra processes your knowledge</h2>
+          <h2 className="section-title">HOW CONTEKXTRA PROCESSES YOUR KNOWLEDGE</h2>
         </Reveal>
 
         <div className="process__track" ref={trackRef}>
