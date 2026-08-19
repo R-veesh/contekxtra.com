@@ -62,8 +62,8 @@ export const services = [
     tag: "Core AI",
     image: service1,
     description:
-      "Creates contextual relationships across all your enterprise information, transforming siloed data into a unified, intelligent knowledge layer.",
-    points: ["Contextual data analysis", "Knowledge relationship mapping", "Semantic understanding", "Information classification"],
+      "Analyze information in organizations and establish relationships among related knowledge bases.",
+    points: ["Contextual data analysis", "Knowledge relationship mapping", "Semantic understanding", "Information classification", "Context enrichment"],
   },
   {
     id: "knowledge-retrieval",
@@ -71,17 +71,17 @@ export const services = [
     tag: "Search",
     image: service2,
     description:
-      "Enables users to find relevant organizational information instantly using natural language, with results ranked by contextual relevance rather than keyword matching.",
-    points: ["Natural-language search", "Semantic retrieval", "Context-aware results", "Source discovery"],
+      "Assist the users in searching connected organizational knowledge through natural language.",
+    points: ["Natural-language search", "Semantic retrieval", "Context-aware results", "Knowledge-source discovery", "Relevance ranking"],
   },
   {
     id: "knowledge-assistant",
-    name: "AI Assistant",
+    name: "Knowledge Assistant",
     tag: "Interface",
     image: service3,
     description:
-      "Helps employees interact with organizational knowledge through contextual Q&A, summarizing complex topics and providing verifiable source links.",
-    points: ["Contextual Q&A", "Information summarization", "Source-aware responses", "Follow-up discovery"],
+      "Conversational knowledge discovery through the generation of summary information and source based answers.",
+    points: ["Contextual questions and answers", "Knowledge exploration", "Information summarization", "Source-aware responses", "Follow-up discovery"],
   },
   {
     id: "knowledge-graph",
@@ -89,8 +89,8 @@ export const services = [
     tag: "Architecture",
     image: service4,
     description:
-      "Maps the complex relationships between information, processes, teams, and organizational resources to provide a complete picture of your business.",
-    points: ["Relationship mapping", "Entity discovery", "Connected information views", "Context visualization"],
+      "Shows connections between information, processes, teams and organizational resources in a networked knowledge environment.",
+    points: ["Knowledge relationship mapping", "Entity discovery", "Connected information views", "Context visualization", "Organizational knowledge mapping"],
   },
 ];
 
