@@ -29,7 +29,7 @@ export default function Documentation() {
           ))}
         </div>
         <Reveal delay={300} className="docs__coming-soon">
-          <p>Full Developer Documentation Coming Soon.</p>
+          <p>Developer documentation and integration resources are coming soon</p>
         </Reveal>
       </div>
     </section>
