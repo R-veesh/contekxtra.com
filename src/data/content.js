@@ -354,32 +354,40 @@ export const pricingPlans = [
 
 export const faq = {
   eyebrow: "{ FAQ }",
-  title: "CLEAR SOLUTIONS TO YOUR CONCERNS",
+  title: "WHAT’S THE CONTEXT?",
   image: about1,
   questions: [
     {
-      q: "What is included in the ContekXtra platform?",
-      a: "Our platform includes the core Context Engine, Semantic Search capabilities, Intelligent Knowledge Assistant, and our proprietary Enterprise Knowledge Graph mapping."
+      q: "What is ContekXtra?",
+      a: "ContekXtra connects organizational knowledge to return context and source-based answers."
     },
     {
-      q: "How long does it take to deploy?",
-      a: "Depending on the complexity and number of data sources, a standard deployment takes between 2 to 6 weeks, including data ingestion and initial semantic mapping."
+      q: "What information does it process?",
+      a: "Documents, databases, knowledge bases, applications, portals, and other organizational solutions."
     },
     {
-      q: "Do you offer mobile-friendly interfaces?",
-      a: "Yes, our web interfaces and API integrations are fully responsive and designed to work seamlessly across desktop, tablet, and mobile devices."
+      q: "Is it different from traditional search?",
+      a: "It applies meaning, intent, and knowledge connections in addition to keyword searching."
     },
     {
-      q: "Can you integrate with our existing databases?",
-      a: "Absolutely. We offer over 150 out-of-the-box connectors for popular enterprise systems including Salesforce, SharePoint, Jira, Confluence, and custom SQL/NoSQL databases."
+      q: "Who is the target audience for ContekXtra?",
+      a: "Knowledge professionals, analysts, researchers, IT, operations, data, and general employees."
     },
     {
-      q: "Do you provide custom AI model fine-tuning?",
-      a: "Yes, for our Enterprise plan customers we offer dedicated AI model fine-tuning to better understand your specific industry jargon and organizational terminology."
+      q: "Does it connect to existing systems?",
+      a: "This is possible depending on the source type, data format, and integration technique."
     },
     {
-      q: "Will our data remain secure and private?",
-      a: "Security is our top priority. We offer SOC2 Type II compliance, end-to-end encryption, and on-premise deployment options for organizations with strict data residency requirements."
+      q: "Does it have an API?",
+      a: "Integration and data retrieval APIs are planned for future development and deployment."
+    },
+    {
+      q: "How long does implementation take?",
+      a: "This depends on the number of sources, integration and data preparation."
+    },
+    {
+      q: "How is enterprise information secured?",
+      a: "Security controls depend on the organization's policy, infrastructure, and deployment specifics."
     }
   ]
 };
