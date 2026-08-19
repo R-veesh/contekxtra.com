@@ -47,12 +47,12 @@ export const hero = {
 };
 
 export const marqueeItems = [
-  "Context Intelligence",
-  "Semantic Retrieval",
-  "Knowledge Graph",
-  "AI Discovery",
-  "Enterprise Search",
-  "Contextual Answers",
+  "CONTEXT INTELLIGENCE",
+  "SEMANTIC RETRIEVAL",
+  "KNOWLEDGE MAPPING",
+  "NATURAL LANGUAGE SEARCH",
+  "SOURCE AWARE ANSWERS",
+  "ENTERPRISE DISCOVERY",
 ];
 
 export const services = [
