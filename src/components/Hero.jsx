@@ -9,7 +9,7 @@ export default function Hero() {
         <Reveal>
           <span className="hero__kicker">{hero.kicker}</span>
           <h1 className="hero__title">
-            {hero.title} <em>.</em>
+            {hero.title}<em>.</em>
           </h1>
           <p className="hero__lede">{hero.lede}</p>
           <div className="hero__actions">
