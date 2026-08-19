@@ -10,7 +10,7 @@ export default function Footer() {
               {brand.name}
             </a>
             <p className="footer__pitch">
-              {brand.tagline} building intelligent solutions for organizations who care about context.
+              ContekXtra helps teams navigate complex organizational information by revealing meaning, relevance, and relationships across connected resources.
             </p>
           </div>
           {footerColumns.map((col) => (
