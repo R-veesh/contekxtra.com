@@ -213,12 +213,12 @@ export const processSteps = [
 ];
 
 export const team = [
-  { name: "Dr. Elena Rostova", role: "Chief AI Scientist", image: team1, alt: "Portrait of Elena Rostova" },
-  { name: "Marcus Chen", role: "VP of Engineering", image: team2, alt: "Portrait of Marcus Chen" },
-  { name: "Sarah Jenkins", role: "Head of Enterprise Solutions", image: team3, alt: "Portrait of Sarah Jenkins" },
+  { name: "Dr. Nathaniel Cross", role: "Chief AI Scientist", image: team1, alt: "Portrait of Dr. Nathaniel Cross" },
+  { name: "Isabelle Duran", role: "VP of Engineering", image: team2, alt: "Portrait of Isabelle Duran" },
+  { name: "Amara Okonkwo", role: "Head of Enterprise Solutions", image: team3, alt: "Portrait of Amara Okonkwo" },
   { name: "David Alby", role: "Lead Architect", image: team4, alt: "Portrait of David Alby" },
-  { name: "Priya Patel", role: "Director of Product", image: team5, alt: "Portrait of Priya Patel" },
-  { name: "James Wilson", role: "Customer Success Lead", image: team6, alt: "Portrait of James Wilson" },
+  { name: "Aiko Tanaka", role: "Director of Product", image: team5, alt: "Portrait of Aiko Tanaka" },
+  { name: "Ethan Wu", role: "Customer Success Lead", image: team6, alt: "Portrait of Ethan Wu" },
 ];
 
 export const testimonials = [
@@ -270,7 +270,7 @@ export const contact = {
   eyebrow: "{ Request a Demo }",
   title: "Experience Context Intelligence",
   person: {
-    name: "Sarah Jenkins",
+    name: "Amara Okonkwo",
     role: `Head of Enterprise Solutions, ContekXtra`,
     avatar: team3,
   },
