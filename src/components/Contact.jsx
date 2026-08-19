@@ -4,14 +4,15 @@ import { sendContactMessage } from "@/services/api";
 import { ArrowUpRight } from "./icons";
 import Reveal from "./Reveal";
 
-const EMPTY = { name: "", email: "", service: "", message: "" };
+const EMPTY = { name: "", email: "", company: "", service: "", message: "" };
 
 function validate(values) {
   const errors = {};
   if (!values.name.trim()) errors.name = "Please tell us your name.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(values.email.trim()))
-    errors.email = "Enter a valid email address.";
-  if (!values.service) errors.service = "Choose a service.";
+    errors.email = "Enter a valid business email address.";
+  if (!values.company.trim()) errors.company = "Please tell us your company.";
+  if (!values.service) errors.service = "Choose an enquiry type.";
   if (values.message.trim().length < 12)
     errors.message = "A little more detail helps (12 characters minimum).";
   return errors;
@@ -69,6 +70,23 @@ export default function Contact() {
               </p>
             </div>
             <p className="contact__bio">{contact.bio}</p>
+
+            <div className="contact__locations" style={{ marginTop: '3rem' }}>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>USA Office</h4>
+                <p>535 Mission Street, San Francisco, CA 94105, USA</p>
+                <p>+1 415 555 2147</p>
+              </div>
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>Sri Lanka Office</h4>
+                <p>Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka</p>
+                <p>+94 11 245 7812</p>
+              </div>
+              <div>
+                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>General Enquiries</h4>
+                <p><a href="mailto:info@contekxtra.com">info@contekxtra.com</a></p>
+              </div>
+            </div>
           </Reveal>
 
           <Reveal variant="right">
@@ -90,7 +108,7 @@ export default function Contact() {
 
               <div className="form__field">
                 <label className="form__label" htmlFor="email">
-                  Email
+                  Business Email
                 </label>
                 <input
                   id="email"
@@ -105,8 +123,24 @@ export default function Contact() {
               </div>
 
               <div className="form__field form__field--full">
+                <label className="form__label" htmlFor="company">
+                  Company
+                </label>
+                <input
+                  id="company"
+                  type="text"
+                  className="form__input"
+                  value={values.company}
+                  onChange={update("company")}
+                  placeholder="Your organization"
+                  aria-invalid={!!errors.company}
+                />
+                {errors.company ? <span className="form__error">{errors.company}</span> : null}
+              </div>
+
+              <div className="form__field form__field--full">
                 <label className="form__label" htmlFor="service">
-                  Service
+                  Enquiry Type
                 </label>
                 <select
                   id="service"
@@ -115,7 +149,7 @@ export default function Contact() {
                   onChange={update("service")}
                   aria-invalid={!!errors.service}
                 >
-                  <option value="">Select a service</option>
+                  <option value="">Select an enquiry type</option>
                   {contact.serviceOptions.map((o) => (
                     <option key={o} value={o}>
                       {o}
@@ -146,7 +180,7 @@ export default function Contact() {
 
               <div className="form__field form__field--full">
                 <button className="btn" type="submit" disabled={sending}>
-                  <span>{sending ? "Sending…" : "Send message"}</span>
+                  <span>{sending ? "Sending…" : "Contact Our Team"}</span>
                   <ArrowUpRight />
                 </button>
               </div>

@@ -267,15 +267,22 @@ export const testimonials = [
 ];
 
 export const contact = {
-  eyebrow: "{ Request a Demo }",
-  title: "Experience Context Intelligence",
+  eyebrow: "{ Contact Us }",
+  title: "LET’S DISCUSS YOUR KNOWLEDGE ENVIRONMENT",
   person: {
     name: "Amara Okonkwo",
     role: `Head of Enterprise Solutions, ContekXtra`,
     avatar: team3,
   },
-  bio: "Ready to unlock your enterprise knowledge? Contact our team for a tailored demonstration of how ContekXtra can connect your organizational data.",
-  serviceOptions: ["Platform Demo", "Technical Integration Discussion", "Enterprise Licensing", "Partner Program", "Other"],
+  bio: "Share your information sources, integration needs, and business use case. Our team will help identify a suitable ContekXtra approach.",
+  serviceOptions: [
+    "Platform Demonstration",
+    "Integration Discussion",
+    "Technical Architecture",
+    "Enterprise Licensing",
+    "Partnership Enquiry",
+    "Other"
+  ],
 };
 
 export const footerColumns = [
