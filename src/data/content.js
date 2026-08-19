@@ -34,7 +34,8 @@ export const navLinks = [
   { label: "Solutions", href: "#solutions" },
   { label: "Pipeline", href: "#pipeline" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Resources", href: "#resources" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 export const hero = {
