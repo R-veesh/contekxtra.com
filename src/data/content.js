@@ -40,7 +40,7 @@ export const navLinks = [
 
 export const hero = {
   kicker: "ContekXtra",
-  title: "Enterprise Knowledge, Understood in Context",
+  title: "ENTERPRISE KNOWLEDGE, UNDERSTOOD IN CONTEXT",
   lede: "Unify fragmented enterprise knowledge, understand contextual relationships between information sources, and deliver relevant intelligence through AI-powered retrieval.",
   image: heroMain,
   imageAlt: "Abstract neural network and context relationship visualization",
