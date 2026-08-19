@@ -72,7 +72,7 @@ export const services = [
     image: service2,
     description:
       "Assist the users in searching connected organizational knowledge through natural language.",
-    points: ["Natural-language search", "Semantic retrieval", "Context-aware results", "Knowledge-source discovery", "Relevance ranking"],
+    points: ["Natural language search", "Semantic retrieval", "Context-aware results", "Knowledge-source discovery", "Relevance ranking"],
   },
   {
     id: "knowledge-assistant",
@@ -96,10 +96,10 @@ export const services = [
 
 export const about = {
   eyebrow: "{ Platform Overview }",
-  title: "Transform fragmented enterprise information into a connected intelligence environment",
+  title: "BUILD A CONNECTED KNOWLEDGE LAYER ACROSS YOUR ORGANIZATION",
   body: [
-    "Modern organizations maintain information across documents, knowledge bases, databases, applications, internal portals, and operational systems. Finding the right information and understanding its context can be difficult when these sources operate independently.",
-    "ContekXtra provides an intelligent contextual retrieval layer that connects enterprise knowledge, processes information relationships, and surfaces relevant intelligence based on user intent.",
+    "Knowledge about business can be dispersed among different media such as documents, databases, knowledge bases and corporate software. It is difficult for employees to obtain knowledge that could be used in their work.",
+    "Contekxtra is able to integrate all this knowledge into one context sensitive environment.",
   ],
   images: [
     { src: about1, alt: "Dashboard showing connected knowledge sources" },
