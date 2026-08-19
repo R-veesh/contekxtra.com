@@ -8,7 +8,7 @@ export default function Pricing() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">{"{ Pricing }"}</span>
-          <h2 className="section-title">Scale your context intelligence</h2>
+          <h2 className="section-title">CHOOSE YOUR PLAN</h2>
         </Reveal>
 
         <div className="pricing__grid">
