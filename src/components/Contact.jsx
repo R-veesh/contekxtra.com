@@ -71,19 +71,19 @@ export default function Contact() {
             </div>
             <p className="contact__bio">{contact.bio}</p>
 
-            <div className="contact__locations" style={{ marginTop: '3rem' }}>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>USA Office</h4>
+            <div className="contact__locations">
+              <div>
+                <h4>USA Office</h4>
                 <p>535 Mission Street, San Francisco, CA 94105, USA</p>
                 <p>+1 415 555 2147</p>
               </div>
-              <div style={{ marginBottom: '1.5rem' }}>
-                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>Sri Lanka Office</h4>
+              <div>
+                <h4>Sri Lanka Office</h4>
                 <p>Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka</p>
                 <p>+94 11 245 7812</p>
               </div>
               <div>
-                <h4 style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-dim)', marginBottom: '0.5rem' }}>General Enquiries</h4>
+                <h4>General Enquiries</h4>
                 <p><a href="mailto:info@contekxtra.com">info@contekxtra.com</a></p>
               </div>
             </div>

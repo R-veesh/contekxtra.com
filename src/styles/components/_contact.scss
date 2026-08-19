@@ -10,8 +10,12 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 1fr 1fr;
     gap: clamp(30px, 5vw, 70px);
+    
+    > .reveal {
+      height: 100%;
+    }
   }
 
   &__person {
@@ -45,6 +49,34 @@
     max-width: 42ch;
   }
 
+  &__locations {
+    margin-top: 3rem;
+    
+    > div {
+      margin-bottom: 1.5rem;
+    }
+
+    h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+
+      a {
+        color: $color-accent;
+        text-decoration: none;
+      }
+    }
+  }
+
   @include below($bp-md) {
     &__grid {
       grid-template-columns: 1fr;
@@ -55,10 +87,14 @@
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr auto auto;
   gap: 20px;
+  height: calc(100% - 42px);
+  margin-top: 42px;
 
   &__field {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 
     &--full {
@@ -115,6 +151,7 @@
   }
 
   &__textarea {
+    flex-grow: 1;
     min-height: 150px;
     resize: vertical;
   }
