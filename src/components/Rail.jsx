@@ -104,16 +104,24 @@ export function Menu({ open, onClose }) {
         </nav>
         <div className="menu__aside">
           <div>
-            <strong>Studio</strong>
-            {brand.address}
+            <strong>USA Office</strong>
+            535 Mission Street, San Francisco, CA 94105, USA
+          </div>
+          <div>
+            <strong>Sri Lanka Office</strong>
+            Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka
           </div>
           <div>
             <strong>Email</strong>
-            <a href={`mailto:${brand.email}`}>{brand.email}</a>
+            <a href="mailto:info@contekxtra.com">info@contekxtra.com</a>
           </div>
           <div>
-            <strong>Phone</strong>
-            <a href={`tel:${brand.phone.replace(/\s/g, "")}`}>{brand.phone}</a>
+            <strong>USA Phone</strong>
+            <a href="tel:+14155552147">+1 415 555 2147</a>
+          </div>
+          <div>
+            <strong>SL Phone</strong>
+            <a href="tel:+94112457812">+94 11 245 7812</a>
           </div>
         </div>
       </div>
