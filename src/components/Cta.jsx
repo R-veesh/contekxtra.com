@@ -9,7 +9,7 @@ export default function Cta() {
         <Reveal>
           <div className="final-cta__card">
             <span className="eyebrow">Start a Conversation</span>
-            <h2 className="final-cta__title">BRING CLARITY TO COMPLEX KNOWLEDGE</h2>
+            <h2 className="final-cta__title">BRING CLARITY TO <em>COMPLEX KNOWLEDGE</em></h2>
             <p className="final-cta__desc">
               Give your teams a smarter way to explore information, recognize connections and find what matters.
             </p>
