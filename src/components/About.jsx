@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { about, stats, clientLogos } from "@/data/content";
 import { useReveal } from "@/hooks/useReveal";
 import { useCountUp } from "@/hooks/useCountUp";
@@ -52,8 +53,9 @@ export default function About() {
               Built to support teams working across distributed information, operational systems and organizational knowledge sources.
             </p>
             <div className="enterprise-env__actions">
-              <Link to="/product" className="button">
-                Explore the Product <span className="arrow">↗</span>
+              <Link to="/product" className="btn">
+                <span>Explore the Product</span>
+                <ArrowUpRight />
               </Link>
             </div>
           </Reveal>
