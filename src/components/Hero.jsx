@@ -13,8 +13,8 @@ export default function Hero() {
           </h1>
           <p className="hero__lede">{hero.lede}</p>
           <div className="hero__actions">
-            <a className="btn" href="#contact">
-              <span>Request a Demo</span>
+            <a className="btn" href="/product">
+              <span>Explore the Platform</span>
               <ArrowUpRight />
             </a>
             <a className="circle-btn" href="#capabilities" aria-label="Scroll to capabilities">
