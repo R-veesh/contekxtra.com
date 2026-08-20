@@ -77,3 +77,25 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.enterprise-env {
+  margin-top: clamp(60px, 10vw, 120px);
+  padding-top: clamp(40px, 8vw, 80px);
+  border-top: 1px solid rgba($color-ink, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__desc {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: $color-ink-soft;
+    max-width: 65ch;
+    margin: 16px auto 0;
+    line-height: 1.6;
+  }
+
+  &__actions {
+    margin-top: 32px;
+  }
+}

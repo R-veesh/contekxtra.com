@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { about, stats, clientLogos } from "@/data/content";
 import { useReveal } from "@/hooks/useReveal";
 import { useCountUp } from "@/hooks/useCountUp";
@@ -43,10 +44,19 @@ export default function About() {
           </Reveal>
         </div>
 
-        <div className="stats">
-          {stats.map((s, i) => (
-            <Stat key={s.label} {...s} delay={i * 90} />
-          ))}
+        <div className="enterprise-env">
+          <Reveal>
+            <span className="eyebrow">{'{ Enterprise Solutions }'}</span>
+            <h3 className="section-title">Designed for complex enterprise knowledge environments</h3>
+            <p className="enterprise-env__desc">
+              Built to support teams working across distributed information, operational systems and organizational knowledge sources.
+            </p>
+            <div className="enterprise-env__actions">
+              <Link to="/product" className="button">
+                Explore the Product <span className="arrow">↗</span>
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -54,20 +64,6 @@ export default function About() {
 }
 
 export function Logos() {
-  return (
-    <section className="section section--tight logos">
-      <div className="container">
-        <Reveal>
-          <p className="logos__title">Trusted by innovative enterprise teams at</p>
-          <div className="logos__grid">
-            {clientLogos.map((name) => (
-              <span className="logos__item" key={name}>
-                {name}
-              </span>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
+  // Hidden as per user request
+  return null;
 }
