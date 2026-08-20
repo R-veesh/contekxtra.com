@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.final-cta {
+  padding-bottom: $space-section;
+
+  &__card {
+    background: $color-dark;
+    border-radius: $radius-xl;
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-white;
+  }
+
+  .eyebrow {
+    color: $color-accent;
+    margin-bottom: 24px;
+    display: inline-block;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 25ch;
+  }
+
+  &__desc {
+    color: rgba($color-white, 0.7);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    max-width: 55ch;
+    margin-bottom: 48px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    
+    @include below($bp-sm) {
+      flex-direction: column;
+      width: 100%;
+      
+      .btn, .button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ import Documentation from "@/components/Documentation";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
+import Cta from "@/components/Cta";
 import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -37,6 +38,7 @@ export default function Home() {
           <Team />
           <Testimonials />
           <Faq />
+          <Cta />
           <Newsletter />
           <Contact />
         </main>
