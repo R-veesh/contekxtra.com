@@ -333,6 +333,7 @@ export const pricingPlans = [
     ],
     highlight: false,
     cta: "Start Free Trial",
+    href: "https://buy.stripe.com/test_7sY3cxc7CaivaYm0VY8Vi01",
   },
   {
     id: "professional",
@@ -350,6 +351,7 @@ export const pricingPlans = [
     ],
     highlight: true,
     cta: "Contact Sales",
+    href: "https://buy.stripe.com/test_28E14p8VqeyLgiG3468Vi00",
   },
   {
     id: "enterprise",
