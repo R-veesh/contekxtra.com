@@ -1,23 +1,35 @@
-import heroMain from "@/assets/hero-main.jpg";
-import service1 from "@/assets/service-1.jpg";
-import service2 from "@/assets/service-2.jpg";
-import service3 from "@/assets/service-3.jpg";
-import service4 from "@/assets/service-4.jpg";
-import about1 from "@/assets/about-1.jpg";
-import about2 from "@/assets/about-2.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import process1 from "@/assets/process-1.jpg";
-import process2 from "@/assets/process-2.jpg";
-import process3 from "@/assets/process-3.jpg";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
-import team5 from "@/assets/team-5.jpg";
-import team6 from "@/assets/team-6.jpg";
+import heroMain from "@/images/Platform Overview.svg";
+import service1 from "@/images/Context Engine.svg";
+import service2 from "@/images/Semantic Search.svg";
+import service3 from "@/images/Knowledge Assistant.svg";
+import service4 from "@/images/Knowledge graph.svg";
+import about1 from "@/images/Platform Overview.svg";
+import about2 from "@/images/Semantic Search.svg";
+import project1 from "@/images/enterprise knowledge teams.svg";
+import project2 from "@/images/business & research teams.svg";
+import project3 from "@/images/IT & Operations.svg";
+import project4 from "@/images/customers support teams.svg";
+import project5 from "@/images/Enterprise data Team.svg";
+import process1 from "@/images/Knowledge Ingestion.svg";
+import process2 from "@/images/Semantic Analysis.svg";
+import process3 from "@/images/Context Detection.svg";
+import process4 from "@/images/Information Retrieval.svg";
+import process5 from "@/images/Contextual Response.svg";
+import process6 from "@/images/Business Application.svg";
+import team1 from "@/images/Dr. Nathaniel Cross.svg";
+import team2 from "@/images/Isabelle Duran.svg";
+import team3 from "@/images/Amara Okonkwo.svg";
+import team4 from "@/images/David Alby.svg";
+import team5 from "@/images/Aiko Tanaka.svg";
+import team6 from "@/images/Ethan Wu.svg";
+import testimonial1 from "@/images/Jonathan Reed.svg";
+import testimonial2 from "@/images/Melissa Carter.svg";
+import testimonial3 from "@/images/Christopher Lee.svg";
+import testimonial4 from "@/images/Marcus Bennett.svg";
+import testimonial5 from "@/images/Natalie Brooks.svg";
+import testimonial6 from "@/images/Lauren Mitchell.svg";
+import faqImage from "@/images/FAQ.svg";
+import contactImage from "@/images/Contact us.svg";
 
 export const brand = {
   name: "ContekXtra",
@@ -162,7 +174,7 @@ export const projects = [
     id: "enterprise-data",
     title: "Enterprise Data Teams",
     meta: "Connected Data Context",
-    image: process1,
+    image: project5,
     alt: "Connected enterprise data mapping",
   },
 ];
@@ -172,42 +184,42 @@ export const processSteps = [
     num: "1",
     title: "Knowledge Ingestion",
     text: "Link the information sources including documents, knowledge bases, databases, apps and other internal sources.",
-    image: process2,
+    image: process1,
     alt: "Data connection architecture",
   },
   {
     num: "2",
     title: "Semantic Analysis",
     text: "Perform semantic analysis to detect meaning, entities and information patterns in the content.",
-    image: process3,
+    image: process2,
     alt: "Semantic processing visualization",
   },
   {
     num: "3",
     title: "Context Detection",
     text: "Detect relationships among the knowledge sources to create the context of enterprise information.",
-    image: process1,
+    image: process3,
     alt: "Context mapping visualization",
   },
   {
     num: "4",
     title: "Information Retrieval",
     text: "Understand the intent of users to retrieve the relevant information from the knowledge sources.",
-    image: process3,
+    image: process4,
     alt: "Information retrieval interface",
   },
   {
     num: "5",
     title: "Contextual Response",
     text: "Provide context-based answers, abstracts and information.",
-    image: process2,
+    image: process5,
     alt: "Contextual response visualization",
   },
   {
     num: "6",
     title: "Business Application",
     text: "Enable people to utilize organizational knowledge for research, operational purposes and decision making.",
-    image: process1,
+    image: process6,
     alt: "Business intelligence application",
   },
 ];
@@ -227,42 +239,42 @@ export const testimonials = [
       "ContekXtra transformed how our research teams find information. What used to take hours of digging through fragmented systems now takes seconds with precise contextual answers.",
     author: "Jonathan Reed",
     role: "VP of Research",
-    image: team1,
+    image: testimonial1,
   },
   {
     quote:
       "Unlike traditional enterprise search that just gives you a list of links, ContekXtra actually understands the relationships between our data sources.",
     author: "Melissa Carter",
     role: "Chief Knowledge Officer",
-    image: team2,
+    image: testimonial2,
   },
   {
     quote:
       "The Semantic Retrieval capabilities have reduced our support resolution times by 40%. Our agents have the exact organizational context they need instantly.",
     author: "Christopher Lee",
     role: "Head of Operations",
-    image: team3,
+    image: testimonial3,
   },
   {
     quote:
       "It's rare to find a platform that is both strategically powerful and incredibly easy to deploy. ContekXtra gave us both.",
     author: "Marcus Bennett",
     role: "Brand Consultant",
-    image: team4,
+    image: testimonial4,
   },
   {
     quote:
       "Every step was thoughtfully executed. They asked the right questions from day one and delivered beyond our expectations.",
     author: "Natalie Brooks",
     role: "Operations Manager",
-    image: team5,
+    image: testimonial5,
   },
   {
     quote:
       "We've seen a massive uptick in team engagement and productivity since launching. The time saved is just incredible.",
     author: "Lauren Mitchell",
     role: "Customer Success",
-    image: team6,
+    image: testimonial6,
   },
 ];
 
@@ -272,7 +284,7 @@ export const contact = {
   person: {
     name: "Amara Okonkwo",
     role: `Head of Enterprise Solutions, ContekXtra`,
-    avatar: team3,
+    avatar: contactImage,
   },
   bio: "Share your information sources, integration needs, and business use case. Our team will help identify a suitable ContekXtra approach.",
   serviceOptions: [
@@ -362,7 +374,7 @@ export const pricingPlans = [
 export const faq = {
   eyebrow: "{ FAQ }",
   title: "WHAT’S THE CONTEKXTRA?",
-  image: about1,
+  image: faqImage,
   questions: [
     {
       q: "What is ContekXtra?",
