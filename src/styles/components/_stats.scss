@@ -8,21 +8,14 @@
   align-items: center;
 
   &__media {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 16px;
+    display: block;
   }
 
   &__shot {
     @include card-media;
-
-    &:first-child {
-      height: clamp(280px, 40vw, 460px);
-    }
-    &:last-child {
-      height: clamp(200px, 30vw, 340px);
-      align-self: end;
-    }
+    background: transparent;
+    height: clamp(280px, 40vw, 460px);
+    width: 100%;
 
     &:hover img {
       transform: scale(1.06);

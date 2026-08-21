@@ -115,7 +115,6 @@ export const about = {
   ],
   images: [
     { src: about1, alt: "Dashboard showing connected knowledge sources" },
-    { src: about2, alt: "Semantic search interface displaying contextual answers" },
   ],
 };
 
