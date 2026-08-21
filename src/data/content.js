@@ -372,7 +372,7 @@ export const pricingPlans = [
 
 export const faq = {
   eyebrow: "{ FAQ }",
-  title: "WHAT’S THE CONTEKXTRA?",
+  title: "WHAT’S THE CONTEXT?",
   image: faqImage,
   questions: [
     {
