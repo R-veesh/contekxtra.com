@@ -25,8 +25,12 @@
   &__media {
     @include card-media;
     background: transparent;
-    aspect-ratio: 4 / 5;
+    overflow: visible;
     position: relative;
+
+    img {
+      object-fit: contain;
+    }
   }
 
   &__socials {
