@@ -24,6 +24,7 @@
 .member {
   &__media {
     @include card-media;
+    background: transparent;
     aspect-ratio: 4 / 5;
     position: relative;
   }
