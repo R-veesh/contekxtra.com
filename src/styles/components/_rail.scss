@@ -22,20 +22,19 @@
     order: 2;
   }
 
-  &__wordmark {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-family: $font-body;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
+  &__logo-link {
+    display: block;
+    width: 140px;
+    transform: rotate(-90deg);
+    // Vertical rotation will visually expand its height instead of width in the layout,
+    // so we use margin to adjust spacing if needed
+    margin-block: 50px;
   }
 
-  &__mark {
-    color: $color-accent;
-    display: grid;
-    place-items: center;
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__socials {
@@ -78,9 +77,10 @@
       order: 1;
     }
 
-    &__wordmark {
-      writing-mode: horizontal-tb;
+    &__logo-link {
       transform: none;
+      width: 110px;
+      margin-block: 0;
     }
 
     &__socials {

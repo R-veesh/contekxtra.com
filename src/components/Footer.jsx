@@ -1,4 +1,5 @@
 import { brand, footerColumns } from "@/data/content";
+import logoUrl from "@/images/Contekxtra Logo.svg";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="footer__top">
           <div>
             <a className="footer__brand" href="#top">
-              {brand.name}
+              <img src={logoUrl} alt={brand.name} />
             </a>
             <p className="footer__pitch">
               ContekXtra helps teams navigate complex organizational information by revealing meaning, relevance, and relationships across connected resources.

@@ -1,6 +1,7 @@
 import { hero, marqueeItems } from "@/data/content";
 import { ArrowUpRight, ArrowDown } from "./icons";
 import Reveal from "./Reveal";
+import videoUrl from "@/assets/heroSectionVideo.mp4";
 
 export default function Hero() {
   return (
@@ -26,7 +27,7 @@ export default function Hero() {
       </div>
 
       <Reveal variant="scale" className="hero__media">
-        <img src={hero.image} alt={hero.imageAlt} />
+        <video src={videoUrl} autoPlay loop muted playsInline />
       </Reveal>
 
       <span className="hero__badge">Global Headquarters — San Francisco</span>

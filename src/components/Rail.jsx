@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { brand, navLinks } from "@/data/content";
 import { Social } from "./icons";
+import logoUrl from "@/images/Contekxtra Logo.svg";
 
 const socials = ["instagram", "linkedin", "x", "behance"];
 
@@ -8,18 +9,12 @@ export default function Rail({ open, onToggle }) {
   return (
     <header className="rail">
       <div className="rail__brand">
-        <span className="rail__mark" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2c.4 4.9 5.1 9.6 10 10-4.9.4-9.6 5.1-10 10-.4-4.9-5.1-9.6-10-10 4.9-.4 9.6-5.1 10-10Z" />
-          </svg>
-        </span>
-        <a href="#top" className="rail__wordmark">
-          {brand.name}
+        <a href="#top" className="rail__logo-link" aria-label={brand.name}>
+          <img src={logoUrl} alt="ContekXtra Logo" className="rail__logo" />
         </a>
       </div>
 
       <button
-        type="button"
         className="burger"
         aria-expanded={open}
         aria-controls="site-menu"
