@@ -3,7 +3,12 @@ import { brand, navLinks } from "@/data/content";
 import { Social } from "./icons";
 import logoUrl from "@/images/Contekxtra Logo.svg";
 
-const socials = ["instagram", "linkedin", "x", "behance"];
+const socials = [
+  { name: "instagram", url: "#contact" },
+  { name: "linkedin", url: "https://www.linkedin.com/company/contekxtra/" },
+  { name: "x", url: "#contact" },
+  { name: "behance", url: "#contact" },
+];
 
 export default function Rail({ open, onToggle }) {
   return (
@@ -27,8 +32,8 @@ export default function Rail({ open, onToggle }) {
 
       <nav className="rail__socials" aria-label="Social links">
         {socials.map((s) => (
-          <a key={s} className="rail__social" href="#contact" aria-label={s}>
-            <Social name={s} />
+          <a key={s.name} className="rail__social" href={s.url} aria-label={s.name} target={s.url !== "#contact" ? "_blank" : undefined} rel={s.url !== "#contact" ? "noopener noreferrer" : undefined}>
+            <Social name={s.name} />
           </a>
         ))}
       </nav>
