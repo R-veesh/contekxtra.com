@@ -1,18 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Reveal from "./Reveal";
 import { sendNewsletterUpdate } from "@/services/api";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("newsletter_subscribed") === "true") {
+      setIsSubscribed(true);
+      setStatus("You are already subscribed!");
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || isSubscribed) return;
     setStatus("Subscribing...");
     try {
       await sendNewsletterUpdate({ email });
       setStatus("Thanks for subscribing!");
+      setIsSubscribed(true);
+      localStorage.setItem("newsletter_subscribed", "true");
       setEmail("");
     } catch {
       setStatus("Something went wrong. Please try again.");
@@ -39,13 +49,18 @@ export default function Newsletter() {
                   placeholder="Enter your email address" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === "Subscribing..." || isSubscribed}
                   required 
                 />
-                <button type="submit" className="newsletter__submit">
-                  Subscribe
+                <button 
+                  type="submit" 
+                  className="newsletter__submit"
+                  disabled={status === "Subscribing..." || isSubscribed}
+                >
+                  {status === "Subscribing..." ? "Subscribing..." : (isSubscribed ? "Subscribed" : "Subscribe")}
                 </button>
               </form>
-              {status && <p style={{ marginTop: "12px", color: "rgba(255,255,255,0.8)", fontSize: "0.9rem" }}>{status}</p>}
+              {status && <p style={{ marginTop: "12px", color: isSubscribed ? "#4ade80" : "rgba(255,255,255,0.8)", fontSize: "0.9rem" }}>{status}</p>}
               <p className="newsletter__disclaimer" style={{ marginTop: status ? "4px" : "16px" }}>
                 We care about your data in our <a href="#">privacy policy</a>.
               </p>

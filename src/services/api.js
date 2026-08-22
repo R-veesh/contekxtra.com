@@ -1,5 +1,5 @@
 export async function sendContactMessage(payload) {
-  const res = await fetch("https://formspree.io/f/mbgrbarq", {
+  const res = await fetch("https://formspree.io/f/xoeabnqe", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json" },
     body: JSON.stringify(payload),
@@ -9,7 +9,7 @@ export async function sendContactMessage(payload) {
 }
 
 export async function sendNewsletterUpdate(payload) {
-  const res = await fetch("https://formspree.io/f/xnparbaw", {
+  const res = await fetch("https://formspree.io/f/mgawqlek", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json" },
     body: JSON.stringify(payload),
