@@ -20,16 +20,6 @@ export default function Rail({ open, onToggle }) {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px", order: 1 }}>
-        <button
-          className="burger"
-          aria-expanded={open}
-          aria-controls="site-menu"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={onToggle}
-        >
-          <span />
-          <span />
-        </button>
         <a
           href="/product"
           className="rail__cta-pill"
@@ -53,6 +43,16 @@ export default function Rail({ open, onToggle }) {
         >
           C.1
         </a>
+        <button
+          className="burger"
+          aria-expanded={open}
+          aria-controls="site-menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={onToggle}
+        >
+          <span />
+          <span />
+        </button>
       </div>
 
       <nav className="rail__socials" aria-label="Social links">
