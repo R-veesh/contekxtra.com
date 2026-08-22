@@ -51,7 +51,7 @@ export default function Rail({ open, onToggle }) {
             transition: "transform 0.25s ease",
           }}
         >
-          C.1 App
+          C.1
         </a>
       </div>
 
