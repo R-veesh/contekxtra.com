@@ -77,6 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+import CookieConsent from "@/components/CookieConsent";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -85,6 +87,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster />
+      <CookieConsent />
     </QueryClientProvider>
   );
 }
