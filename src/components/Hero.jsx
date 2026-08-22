@@ -15,7 +15,7 @@ export default function Hero() {
           <p className="hero__lede">{hero.lede}</p>
           <div className="hero__actions">
             <a className="btn" href="/product">
-              <span>Explore the Platform</span>
+              <span>Explore ContekXtra C.1</span>
               <ArrowUpRight />
             </a>
             <a className="circle-btn" href="#capabilities" aria-label="Scroll to capabilities">

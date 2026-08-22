@@ -37,7 +37,10 @@ export default function Pricing() {
                 </ul>
               </div>
               <div className="pricing-card__foot">
-                <a className={plan.highlight ? "btn" : "btn btn--outline"} href={plan.href || "#contact"}>
+                <a
+                  className={plan.highlight ? "btn" : "btn btn--outline"}
+                  href={plan.id === "starter" ? "/product" : "#contact"}
+                >
                   <span>{plan.cta}</span>
                   <ArrowUpRight />
                 </a>

@@ -1,0 +1,649 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.product-page {
+  padding-top: clamp(60px, 8vw, 120px);
+}
+
+// Hero Section
+.product-hero {
+  position: relative;
+  padding-bottom: clamp(48px, 8vw, 96px);
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: $radius-pill;
+    background: rgba(240, 82, 59, 0.12);
+    border: 1px solid rgba(240, 82, 59, 0.25);
+    color: $color-accent;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $color-accent;
+      box-shadow: 0 0 10px $color-accent;
+      animation: pulse-glow 2s infinite;
+    }
+  }
+
+  &__title {
+    @include display(2.2rem, 4.4rem);
+    max-width: 22ch;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+
+    em {
+      font-style: normal;
+      color: $color-accent;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    color: $color-ink-soft;
+    max-width: 48ch;
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  &__primary-cta {
+    --btn-bg: #{$color-accent};
+    --btn-fg: #{$color-white};
+    font-size: 1rem;
+    padding: 16px 36px;
+    box-shadow: 0 12px 28px rgba(240, 82, 59, 0.35);
+
+    &:hover {
+      box-shadow: 0 18px 36px rgba(240, 82, 59, 0.45);
+    }
+  }
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 0.4; transform: scale(0.9); }
+}
+
+// Live Query Demonstrator Sandbox
+.query-sandbox {
+  background: $color-dark;
+  color: $color-white;
+  border-radius: $radius-lg;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-line-dark;
+    margin-bottom: 24px;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__chip {
+    padding: 8px 16px;
+    border-radius: $radius-pill;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s $ease-out;
+
+    &:hover,
+    &--active {
+      background: $color-accent;
+      border-color: $color-accent;
+      color: $color-white;
+    }
+  }
+
+  &__metrics {
+    display: flex;
+    gap: 20px;
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      span {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      strong {
+        font-family: $font-display;
+        font-size: 1rem;
+        color: #4ade80;
+      }
+    }
+  }
+
+  &__box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: $radius-md;
+    padding: 24px;
+  }
+
+  &__input-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: $radius-sm;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.9);
+
+    .prompt-symbol {
+      color: $color-accent;
+      font-weight: bold;
+    }
+  }
+
+  &__answer {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 20px;
+  }
+
+  &__sources {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+
+    .source-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-right: 4px;
+    }
+
+    .source-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: $radius-pill;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-family: monospace;
+    }
+  }
+}
+
+// Capability Grid
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+
+  &__card {
+    background: $color-white;
+    border: 1px solid $color-line;
+    border-radius: $radius-md;
+    padding: 36px 30px;
+    transition: all 0.35s $ease-out;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(240, 82, 59, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__metric {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-accent;
+    background: rgba(240, 82, 59, 0.08);
+    padding: 4px 12px;
+    border-radius: $radius-pill;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: $color-ink;
+  }
+
+  &__desc {
+    color: $color-ink-soft;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+}
+
+// Use Cases Section
+.use-cases {
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  &__tab {
+    padding: 14px 28px;
+    border-radius: $radius-pill;
+    background: $color-white;
+    border: 1px solid $color-line;
+    color: $color-ink;
+    font-family: $font-display;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s $ease-out;
+
+    &:hover,
+    &--active {
+      background: $color-dark;
+      border-color: $color-dark;
+      color: $color-white;
+    }
+  }
+
+  &__panel {
+    background: $color-white;
+    border: 1px solid $color-line;
+    border-radius: $radius-lg;
+    padding: clamp(28px, 5vw, 56px);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+
+    @include below($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__tagline {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $color-ink;
+  }
+
+  &__summary {
+    color: $color-ink-soft;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  &__highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: grid;
+    gap: 12px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+      color: $color-ink;
+
+      &::before {
+        content: "✓";
+        display: inline-grid;
+        place-items: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(240, 82, 59, 0.12);
+        color: $color-accent;
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__impact-card {
+    background: $color-dark;
+    color: $color-white;
+    border-radius: $radius-md;
+    padding: 32px;
+    text-align: center;
+
+    .label {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 12px;
+    }
+
+    .value {
+      font-family: $font-display;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: $color-accent;
+      line-height: 1.2;
+    }
+  }
+}
+
+// Interactive ROI Calculator
+.roi-calculator {
+  background: $color-canvas-alt;
+  border-radius: $radius-lg;
+  padding: clamp(28px, 4vw, 48px);
+  margin-top: 48px;
+  border: 1px solid $color-line;
+
+  &__title {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    color: $color-ink-soft;
+    margin-bottom: 28px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: center;
+
+    @include below($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 0.92rem;
+
+      strong {
+        color: $color-accent;
+      }
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: $color-accent;
+    }
+  }
+
+  &__result {
+    background: $color-white;
+    border-radius: $radius-md;
+    padding: 32px;
+    border: 1px solid $color-line;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+    .number {
+      font-family: $font-display;
+      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+      font-weight: 800;
+      color: $color-accent;
+      margin-bottom: 4px;
+    }
+
+    .unit {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: $color-ink;
+      margin-bottom: 12px;
+    }
+
+    .subtext {
+      font-size: 0.85rem;
+      color: $color-ink-soft;
+    }
+  }
+}
+
+// Scannable Technical Stack (NVIDIA AI & Accelerated Computing)
+.tech-details {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: $radius-md;
+    padding: 32px;
+    transition: all 0.35s $ease-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(240, 82, 59, 0.5);
+      transform: translateY(-4px);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__sdk-name {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.12);
+    padding: 4px 10px;
+    border-radius: $radius-pill;
+    border: 1px solid rgba(74, 222, 128, 0.25);
+  }
+
+  &__cat {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: $color-accent;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.76);
+  }
+}
+
+// Pipeline Visualizer
+.pipeline-sim {
+  background: $color-white;
+  border: 1px solid $color-line;
+  border-radius: $radius-lg;
+  padding: clamp(28px, 4vw, 48px);
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    margin-bottom: 32px;
+
+    @include below($bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include below($bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__step {
+    background: $color-canvas;
+    border: 1px solid $color-line;
+    border-radius: $radius-md;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s $ease-out;
+
+    &:hover,
+    &--active {
+      background: $color-dark;
+      color: $color-white;
+      border-color: $color-dark;
+
+      .step-num {
+        color: $color-accent;
+      }
+
+      .step-tech {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .step-num {
+      font-family: $font-display;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: $color-line;
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .step-tech {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: $color-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Bottom CTA Banner
+.product-cta-banner {
+  background: $color-dark !important;
+  color: $color-white !important;
+  border-radius: $radius-xl;
+  padding: clamp(36px, 6vw, 72px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .eyebrow {
+    color: $color-accent !important;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    font-weight: 800;
+    color: $color-white !important;
+    margin: 12px auto 20px auto;
+    max-width: 22ch;
+    line-height: 1.15;
+  }
+
+  &__desc {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 1.15rem;
+    max-width: 44ch;
+    margin: 0 auto 36px auto;
+    line-height: 1.6;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}

@@ -18,9 +18,9 @@ export default function Cta() {
                 <span>Request a Demo</span>
                 <ArrowUpRight />
               </a>
-              <Link to="/product" className="button">
-                Explore the Platform
-              </Link>
+              <a href="/product" className="btn btn--ghost">
+                <span>Explore ContekXtra C.1</span>
+              </a>
             </div>
           </div>
         </Reveal>

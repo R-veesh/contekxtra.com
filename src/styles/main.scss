@@ -21,6 +21,7 @@
 @use "components/faq";
 @use "components/newsletter";
 @use "components/cta";
+@use "components/product";
 @use "pages/home";
 
 *,
@@ -32,6 +33,23 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --color-canvas: #{$color-canvas};
+  --color-canvas-alt: #{$color-canvas-alt};
+  --color-ink: #{$color-ink};
+  --color-ink-soft: #{$color-ink-soft};
+  --color-muted: #{$color-muted};
+  --color-dark: #{$color-dark};
+  --color-dark-soft: #{$color-dark-soft};
+  --color-line: #{$color-line};
+  --color-line-dark: #{$color-line-dark};
+  --color-accent: #{$color-accent};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-white: #{$color-white};
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
 }
 
 @include reduced-motion {
