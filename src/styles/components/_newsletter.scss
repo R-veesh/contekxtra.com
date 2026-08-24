@@ -46,6 +46,7 @@
 
     @include below($bp-md) {
       margin: 0 auto;
+      max-width: 100%;
     }
   }
 
@@ -58,6 +59,8 @@
   &__form {
     display: flex;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
     
     @include below($bp-sm) {
       flex-direction: column;
@@ -66,6 +69,8 @@
 
   &__input {
     flex: 1;
+    width: 100%;
+    min-width: 0;
     background: rgba($color-white, 0.05);
     border: 1px solid rgba($color-white, 0.1);
     border-radius: $radius-pill;
@@ -98,10 +103,15 @@
     cursor: pointer;
     transition: all 0.3s $ease-out;
     white-space: nowrap;
+    max-width: 100%;
 
     &:hover {
       background: $color-accent-dark;
       transform: translateY(-2px);
+    }
+    
+    @include below($bp-sm) {
+      width: 100%;
     }
   }
 
