@@ -4,10 +4,11 @@ import { Social, ArrowUpRight } from "./icons";
 import logoUrl from "@/images/Contekxtra Logo.svg";
 
 const socials = [
-  { name: "instagram", url: "/#contact" },
+  { name: "facebook", url: "https://www.facebook.com/ContekXtra/" },
+  { name: "x", url: "https://x.com/ContekXtra" },
+  { name: "pinterest", url: "https://www.pinterest.com/ContekXtra/" },
+  { name: "youtube", url: "https://www.youtube.com/@ContekXtra" },
   { name: "linkedin", url: "https://www.linkedin.com/company/contekxtra/" },
-  { name: "x", url: "/#contact" },
-  { name: "behance", url: "/#contact" },
 ];
 
 export default function Rail({ open, onToggle }) {
