@@ -20,30 +20,11 @@ export default function Rail({ open, onToggle }) {
         </a>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px", order: 1 }}>
+      <div className="rail__actions">
         <a
           href="/product"
           className="rail__cta-pill"
           title="ContekXtra C.1 Product Page"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "12px 6px",
-            borderRadius: "999px",
-            background: "var(--color-accent)",
-            color: "#ffffff",
-            fontSize: "0.85rem",
-            fontWeight: "700",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            whiteSpace: "nowrap",
-            boxShadow: "0 4px 12px rgba(240, 82, 59, 0.3)",
-            transition: "transform 0.25s ease",
-            writingMode: "vertical-rl",
-            transform: "rotate(180deg)",
-            order: 2
-          }}
         >
           C.1
         </a>
