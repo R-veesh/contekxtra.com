@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { contact } from "@/data/content";
 import { sendContactMessage } from "@/services/api";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { ArrowUpRight } from "./icons";
 import Reveal from "./Reveal";
 
@@ -23,6 +24,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
+  const [token, setToken] = useState("");
 
   const update = (field) => (e) => {
     setValues((v) => ({ ...v, [field]: e.target.value }));
@@ -37,10 +39,14 @@ export default function Contact() {
       setStatus("Please fix the highlighted fields.");
       return;
     }
+    if (!token) {
+      setStatus("Please complete the security check.");
+      return;
+    }
     setSending(true);
     setStatus("Sending…");
     try {
-      const res = await sendContactMessage(values);
+      const res = await sendContactMessage({ ...values, "cf-turnstile-response": token });
       setStatus(res.message ?? "Thanks — we'll be in touch shortly.");
       setValues(EMPTY);
     } catch {
@@ -177,6 +183,21 @@ export default function Contact() {
               <p className="form__status" role="status" aria-live="polite">
                 {status}
               </p>
+
+              <div className="form__field form__field--full" style={{ display: "flex", justifyContent: "center", margin: "1rem 0" }}>
+                <Turnstile
+                  siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+                  onSuccess={(token) => {
+                    setToken(token);
+                    setStatus("");
+                  }}
+                  onError={() => setStatus("Security check failed. Please try again.")}
+                  onExpire={() => {
+                    setToken("");
+                    setStatus("Security check expired. Please complete it again.");
+                  }}
+                />
+              </div>
 
               <div className="form__field form__field--full">
                 <button className="btn" type="submit" disabled={sending}>
