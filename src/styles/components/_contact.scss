@@ -111,6 +111,7 @@
   &__select,
   &__textarea {
     width: 100%;
+    min-width: 0;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid $color-line-dark;
     border-radius: $radius-sm;
@@ -168,7 +169,19 @@
     min-height: 1.2em;
   }
 
+  &__turnstile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    max-width: 100%;
+    
+    @include below($bp-sm) {
+      transform: scale(0.9);
+      transform-origin: center center;
+    }
+  }
+
   @include below($bp-sm) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
