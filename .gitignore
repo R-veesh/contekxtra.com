@@ -34,3 +34,4 @@ dist-ssr
 
 # Static site deployment / Vinxi build output
 dist-static/
+assets/
