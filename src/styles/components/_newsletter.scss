@@ -17,6 +17,7 @@
     @include below($bp-md) {
       grid-template-columns: 1fr;
       text-align: center;
+      padding: clamp(24px, 5vw, 40px);
     }
   }
 

@@ -184,7 +184,7 @@ export default function Contact() {
                 {status}
               </p>
 
-              <div className="form__field form__field--full" style={{ display: "flex", justifyContent: "center", margin: "1rem 0" }}>
+              <div className="form__field form__field--full" style={{ display: "flex", justifyContent: "center", margin: "1rem 0", maxWidth: "100%", overflow: "hidden" }}>
                 <Turnstile
                   siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
                   onSuccess={(token) => {
