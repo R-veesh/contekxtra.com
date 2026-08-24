@@ -56,10 +56,10 @@ export default function Terms() {
                       <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
                     </li>
                     <li>
-                      <strong>Country/State</strong> refers to: California, United States
+                      <strong>Country/State</strong> refers to: Sri Lanka
                     </li>
                     <li>
-                      <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in these Terms and Conditions) refers to ContekXtra Technologies Inc., 535 Mission Street, San Francisco, CA 94105, USA.
+                      <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in these Terms and Conditions) refers to ContekXtra Technologies (Pvt) Ltd, Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka.
                     </li>
                     <li>
                       <strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.
