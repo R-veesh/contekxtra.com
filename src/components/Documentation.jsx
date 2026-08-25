@@ -2,10 +2,10 @@ import Reveal from "./Reveal";
 import { ArrowUpRight } from "./icons";
 
 const docs = [
-  { title: "Knowledge integration APIs", desc: "Connect any data source" },
-  { title: "Retrieval API documentation", desc: "Embed semantic search" },
-  { title: "Data connection guides", desc: "Secure pipeline setup" },
-  { title: "Platform SDK references", desc: "Build custom integrations" },
+  { title: "Knowledge integration APIs", desc: "Connect any data source", href: "#pipeline" },
+  { title: "Retrieval API documentation", desc: "Embed semantic search", href: "#capabilities" },
+  { title: "Data connection guides", desc: "Secure pipeline setup", href: "#contact" },
+  { title: "Platform SDK references", desc: "Build custom integrations", href: "/product" },
 ];
 
 export default function Documentation() {
@@ -20,7 +20,7 @@ export default function Documentation() {
         <div className="docs__grid">
           {docs.map((doc, i) => (
             <Reveal key={doc.title} delay={i * 60}>
-              <a className="doc-card" href="#">
+              <a className="doc-card" href={doc.href}>
                 <span className="doc-card__title">{doc.title}</span>
                 <span className="doc-card__desc">{doc.desc}</span>
                 <span className="doc-card__icon"><ArrowUpRight /></span>
