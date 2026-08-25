@@ -69,7 +69,7 @@ export const marqueeItems = [
 
 export const services = [
   {
-    id: "context-engine",
+    id: "context engine",
     name: "Context Engine",
     tag: "Core AI",
     image: service1,
@@ -78,25 +78,25 @@ export const services = [
     points: ["Contextual data analysis", "Knowledge relationship mapping", "Semantic understanding", "Information classification", "Context enrichment"],
   },
   {
-    id: "knowledge-retrieval",
+    id: "knowledge retrieval",
     name: "Semantic Search",
     tag: "Search",
     image: service2,
     description:
       "Assist the users in searching connected organizational knowledge through natural language.",
-    points: ["Natural language search", "Semantic retrieval", "Context-aware results", "Knowledge-source discovery", "Relevance ranking"],
+    points: ["Natural language search", "Semantic retrieval", "Context aware results", "Knowledge source discovery", "Relevance ranking"],
   },
   {
-    id: "knowledge-assistant",
+    id: "knowledge assistant",
     name: "Knowledge Assistant",
     tag: "Interface",
     image: service3,
     description:
       "Conversational knowledge discovery through the generation of summary information and source based answers.",
-    points: ["Contextual questions and answers", "Knowledge exploration", "Information summarization", "Source-aware responses", "Follow-up discovery"],
+    points: ["Contextual questions and answers", "Knowledge exploration", "Information summarization", "Source aware responses", "Follow up discovery"],
   },
   {
-    id: "knowledge-graph",
+    id: "knowledge graph",
     name: "Knowledge Graph",
     tag: "Architecture",
     image: service4,
@@ -142,35 +142,35 @@ export const clientLogos = [
 
 export const projects = [
   {
-    id: "knowledge-teams",
+    id: "knowledge teams",
     title: "Enterprise Knowledge Teams",
     meta: "Knowledge Discovery",
     image: project1,
     alt: "Knowledge management dashboard",
   },
   {
-    id: "business-analysts",
+    id: "business analysts",
     title: "Business and Research Teams",
     meta: "Contextual Analysis",
     image: project2,
     alt: "Data analysis and reporting interface",
   },
   {
-    id: "it-operations",
+    id: "it operations",
     title: "IT & Operations",
     meta: "Operational Knowledge",
     image: project3,
     alt: "System architecture mapping",
   },
   {
-    id: "customer-support",
+    id: "customer support",
     title: "Customer Support Teams",
     meta: "Support Intelligence",
     image: project4,
     alt: "Support agent intelligence interface",
   },
   {
-    id: "enterprise-data",
+    id: "enterprise data",
     title: "Enterprise Data Teams",
     meta: "Connected Data Context",
     image: project5,
@@ -210,7 +210,7 @@ export const processSteps = [
   {
     num: "5",
     title: "Contextual Response",
-    text: "Provide context-based answers, abstracts and information.",
+    text: "Provide context based answers, abstracts and information.",
     image: process5,
     alt: "Contextual response visualization",
   },
@@ -325,10 +325,10 @@ export const pricingPlans = [
     period: "/ month",
     description: "For teams beginning with connected knowledge discovery and contextual retrieval.",
     features: [
-      "Core knowledge-source connections",
-      "Natural-language search",
+      "Core knowledge source connections",
+      "Natural language search",
       "Semantic retrieval",
-      "Source-aware responses",
+      "Source aware responses",
       "Standard workspace support",
     ],
     highlight: false,
@@ -379,7 +379,7 @@ export const faq = {
   questions: [
     {
       q: "What is ContekXtra?",
-      a: "ContekXtra connects organizational knowledge to return context and source-based answers."
+      a: "ContekXtra connects organizational knowledge to return context and source based answers."
     },
     {
       q: "What information does it process?",
