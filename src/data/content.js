@@ -257,7 +257,7 @@ export const testimonials = [
   {
     quote:
       "It's rare to find a platform that is both strategically powerful and incredibly easy to deploy. ContekXtra gave us both.",
-    author: "Marcus Bennett",
+    author: "Rosalie Bennett",
     role: "Brand Consultant",
     image: testimonial4,
   },
