@@ -332,7 +332,7 @@ export const pricingPlans = [
       "Standard workspace support",
     ],
     highlight: false,
-    cta: "Start Free Trial",
+    cta: "Subscribe Now",
     href: "https://buy.stripe.com/test_7sY3cxc7CaivaYm0VY8Vi01",
   },
   {
@@ -350,7 +350,7 @@ export const pricingPlans = [
       "Priority support options",
     ],
     highlight: true,
-    cta: "Contact Sales",
+    cta: "Subscribe Now",
     href: "https://buy.stripe.com/test_28E14p8VqeyLgiG3468Vi00",
   },
   {
