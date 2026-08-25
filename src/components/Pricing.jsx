@@ -40,8 +40,8 @@ export default function Pricing() {
                 <a
                   className={plan.highlight ? "btn" : "btn btn--outline"}
                   href={plan.href || "#contact"}
-                  target={plan.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={plan.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  target={plan.href ? "_blank" : "_self"}
+                  rel={plan.href ? "noopener noreferrer" : ""}
                 >
                   <span>{plan.cta}</span>
                   <ArrowUpRight />
