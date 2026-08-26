@@ -1,60 +1,19 @@
 import { useState } from "react";
 import { contact } from "@/data/content";
-import { sendContactMessage } from "@/services/api";
-import { Turnstile } from "@marsidev/react-turnstile";
+import { useForm, ValidationError } from "@formspree/react";
 import { ArrowUpRight } from "./icons";
 import Reveal from "./Reveal";
 
-const EMPTY = { name: "", email: "", company: "", service: "", message: "" };
-
-function validate(values) {
-  const errors = {};
-  if (!values.name.trim()) errors.name = "Please tell us your name.";
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(values.email.trim()))
-    errors.email = "Enter a valid business email address.";
-  if (!values.company.trim()) errors.company = "Please tell us your company.";
-  if (!values.service) errors.service = "Choose an enquiry type.";
-  if (values.message.trim().length < 12)
-    errors.message = "A little more detail helps (12 characters minimum).";
-  return errors;
-}
-
 export default function Contact() {
-  const [values, setValues] = useState(EMPTY);
-  const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("");
-  const [sending, setSending] = useState(false);
-  const [token, setToken] = useState("");
+  const [state, handleSubmit] = useForm("mbgrbarq");
+  
+  // Local state for tracking input values to manage placeholder/controlled styles if necessary,
+  // but Formspree handles the actual submission.
+  const [values, setValues] = useState({ name: "", email: "", company: "", service: "", message: "" });
 
   const update = (field) => (e) => {
     setValues((v) => ({ ...v, [field]: e.target.value }));
-    setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
-
-  async function onSubmit(e) {
-    e.preventDefault();
-    const found = validate(values);
-    setErrors(found);
-    if (Object.keys(found).length) {
-      setStatus("Please fix the highlighted fields.");
-      return;
-    }
-    if (!token) {
-      setStatus("Please complete the security check.");
-      return;
-    }
-    setSending(true);
-    setStatus("Sending…");
-    try {
-      const res = await sendContactMessage({ ...values, "cf-turnstile-response": token });
-      setStatus(res.message ?? "Thanks — we'll be in touch shortly.");
-      setValues(EMPTY);
-    } catch {
-      setStatus("Something went wrong. Please email us directly.");
-    } finally {
-      setSending(false);
-    }
-  }
 
   return (
     <section className="section contact" id="contact">
@@ -96,20 +55,21 @@ export default function Contact() {
           </Reveal>
 
           <Reveal variant="right">
-            <form className="form" onSubmit={onSubmit} noValidate>
+            <form className="form" onSubmit={handleSubmit}>
               <div className="form__field">
                 <label className="form__label" htmlFor="name">
                   Name
                 </label>
                 <input
                   id="name"
+                  name="name"
                   className="form__input"
                   value={values.name}
                   onChange={update("name")}
                   placeholder="Your name"
-                  aria-invalid={!!errors.name}
+                  required
                 />
-                {errors.name ? <span className="form__error">{errors.name}</span> : null}
+                <ValidationError prefix="Name" field="name" errors={state.errors} className="form__error" />
               </div>
 
               <div className="form__field">
@@ -119,13 +79,14 @@ export default function Contact() {
                 <input
                   id="email"
                   type="email"
+                  name="email"
                   className="form__input"
                   value={values.email}
                   onChange={update("email")}
                   placeholder="you@company.com"
-                  aria-invalid={!!errors.email}
+                  required
                 />
-                {errors.email ? <span className="form__error">{errors.email}</span> : null}
+                <ValidationError prefix="Email" field="email" errors={state.errors} className="form__error" />
               </div>
 
               <div className="form__field form__field--full">
@@ -135,13 +96,14 @@ export default function Contact() {
                 <input
                   id="company"
                   type="text"
+                  name="company"
                   className="form__input"
                   value={values.company}
                   onChange={update("company")}
                   placeholder="Your organization"
-                  aria-invalid={!!errors.company}
+                  required
                 />
-                {errors.company ? <span className="form__error">{errors.company}</span> : null}
+                <ValidationError prefix="Company" field="company" errors={state.errors} className="form__error" />
               </div>
 
               <div className="form__field form__field--full">
@@ -150,10 +112,11 @@ export default function Contact() {
                 </label>
                 <select
                   id="service"
+                  name="service"
                   className="form__select"
                   value={values.service}
                   onChange={update("service")}
-                  aria-invalid={!!errors.service}
+                  required
                 >
                   <option value="">Select an enquiry type</option>
                   {contact.serviceOptions.map((o) => (
@@ -162,7 +125,7 @@ export default function Contact() {
                     </option>
                   ))}
                 </select>
-                {errors.service ? <span className="form__error">{errors.service}</span> : null}
+                <ValidationError prefix="Enquiry Type" field="service" errors={state.errors} className="form__error" />
               </div>
 
               <div className="form__field form__field--full">
@@ -171,37 +134,31 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   className="form__textarea"
                   value={values.message}
                   onChange={update("message")}
                   placeholder="Tell us about your organization's knowledge challenges..."
-                  aria-invalid={!!errors.message}
+                  required
                 />
-                {errors.message ? <span className="form__error">{errors.message}</span> : null}
+                <ValidationError prefix="Message" field="message" errors={state.errors} className="form__error" />
               </div>
 
-              <p className="form__status" role="status" aria-live="polite">
-                {status}
-              </p>
+              {state.succeeded && (
+                <p className="form__status" role="status" aria-live="polite">
+                  Thanks — we'll be in touch shortly.
+                </p>
+              )}
 
-              <div className="form__field form__field--full form__turnstile-wrapper">
-                <Turnstile
-                  siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-                  onSuccess={(token) => {
-                    setToken(token);
-                    setStatus("");
-                  }}
-                  onError={() => setStatus("Security check failed. Please try again.")}
-                  onExpire={() => {
-                    setToken("");
-                    setStatus("Security check expired. Please complete it again.");
-                  }}
-                />
-              </div>
+              {state.errors && state.errors.length > 0 && (
+                <p className="form__status" role="status" aria-live="polite">
+                  Please fix the errors above or complete the security check.
+                </p>
+              )}
 
               <div className="form__field form__field--full">
-                <button className="btn" type="submit" disabled={sending}>
-                  <span>{sending ? "Sending…" : "Contact Our Team"}</span>
+                <button className="btn" type="submit" disabled={state.submitting}>
+                  <span>{state.submitting ? "Sending…" : "Contact Our Team"}</span>
                   <ArrowUpRight />
                 </button>
               </div>
