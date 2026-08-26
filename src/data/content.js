@@ -33,6 +33,7 @@ import contactImage from "@/images/Contact us.svg";
 
 export const brand = {
   name: "ContekXtra",
+  legalName: "ContekXtra Technologies (Pvt) Ltd",
   tagline: "Enterprise Context Intelligence",
   email: "info@contekxtra.com",
   phone: "+1 (800) 555 0199",
