@@ -41,7 +41,6 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <span>
-            © {new Date().getFullYear()} {brand.name}. All rights reserved.
             © {new Date().getFullYear()} {brand.legalName || brand.name}. All rights reserved.
           </span>
           <a href={`mailto:${brand.email}`}>{brand.email}</a>
