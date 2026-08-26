@@ -310,7 +310,7 @@ export const footerColumns = [
     title: "Company",
     links: [
       { label: "Contact Sales", href: "#contact" },
-      { label: "About Us", href: "#" },
+      { label: "About Us", href: "#platform" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
