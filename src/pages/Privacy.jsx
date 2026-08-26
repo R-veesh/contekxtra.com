@@ -16,7 +16,6 @@ export default function Privacy() {
         <main className="legal-page" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
           <section className="section">
             <div className="container" style={{ maxWidth: "800px" }}>
-              <Reveal>
                 <div
                   className="legal-content"
                   style={{
@@ -25,7 +24,8 @@ export default function Privacy() {
                     gap: "1.2rem",
                     lineHeight: "1.7",
                     color: "var(--color-ink)",
-                    fontSize: "1.05rem"
+                    fontSize: "1.05rem",
+                    animation: "fadeIn 0.6s ease-out forwards"
                   }}
                 >
                   <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", fontFamily: "var(--font-display)", fontWeight: 700 }}>
@@ -276,7 +276,6 @@ export default function Privacy() {
                     <li>By mail: Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka</li>
                   </ul>
                 </div>
-              </Reveal>
             </div>
           </section>
         </main>
