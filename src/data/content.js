@@ -303,7 +303,7 @@ export const footerColumns = [
       { label: "Capabilities", href: "#capabilities" },
       { label: "Architecture", href: "#pipeline" },
       { label: "Pricing", href: "#pricing" },
-      { label: "Documentation", href: "#" },
+      { label: "Documentation", href: "#documentation" },
     ],
   },
   {

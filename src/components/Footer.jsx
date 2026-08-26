@@ -1,5 +1,6 @@
 import { brand, footerColumns } from "@/data/content";
 import logoUrl from "@/images/Contekxtra Logo.svg";
+import { Link } from "@tanstack/react-router";
 
 export default function Footer() {
   return (
@@ -19,9 +20,15 @@ export default function Footer() {
               <p className="footer__col-title">{col.title}</p>
               <nav className="footer__links" aria-label={col.title}>
                 {col.links.map((l) => (
-                  <a key={l.label} href={l.href}>
-                    {l.label}
-                  </a>
+                  l.href.startsWith("/") ? (
+                    <Link key={l.label} to={l.href}>
+                      {l.label}
+                    </Link>
+                  ) : (
+                    <a key={l.label} href={l.href}>
+                      {l.label}
+                    </a>
+                  )
                 ))}
               </nav>
             </div>
