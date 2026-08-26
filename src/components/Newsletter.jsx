@@ -67,7 +67,7 @@ export default function Newsletter() {
               )}
 
               <p className="newsletter__disclaimer" style={{ marginTop: (state.succeeded || state.errors?.length || isSubscribed) ? "4px" : "16px" }}>
-                We care about your data in our <a href="#">privacy policy</a>.
+                We care about your data in our <a href="/privacy">privacy policy</a>.
               </p>
             </div>
           </div>
