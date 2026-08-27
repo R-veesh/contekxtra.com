@@ -8,7 +8,7 @@ const socials = [
   { name: "x", url: "https://x.com/ContekXtra" },
   { name: "pinterest", url: "https://www.pinterest.com/ContekXtra/" },
   { name: "youtube", url: "https://www.youtube.com/@ContekXtra" },
-  { name: "linkedin", url: "https://www.linkedin.com/company/contekxtra/" },
+  { name: "linkedin", url: "https://www.linkedin.com/company/memorix-lk/" },
 ];
 
 export default function Rail({ open, onToggle }) {
