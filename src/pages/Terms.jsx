@@ -59,7 +59,7 @@ export default function Terms() {
                       <strong>Country/State</strong> refers to: Sri Lanka
                     </li>
                     <li>
-                      <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in these Terms and Conditions) refers to ContekXtra Technologies (Pvt) Ltd, Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka.
+                      <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in these Terms and Conditions) refers to ContekXtra Technologies (Pvt) Ltd, 535 Mission Street, San Francisco, CA 94105, USA and Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka.
                     </li>
                     <li>
                       <strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.
@@ -235,8 +235,10 @@ export default function Terms() {
                         https://contekxtra.com
                       </a>
                     </li>
-                    <li>By phone: +94 11 245 7812</li>
-                    <li>By mail: Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka</li>
+                    <li>By phone (USA): +1 415 555 2147</li>
+                    <li>By phone (Sri Lanka): +94 11 245 7812</li>
+                    <li>By mail (USA Office): 535 Mission Street, San Francisco, CA 94105, USA</li>
+                    <li>By mail (Sri Lanka Office): Level 4, Orion City, Dr Danister de Silva Mawatha, Colombo 09, Sri Lanka</li>
                   </ul>
                 </div>
             </div>
