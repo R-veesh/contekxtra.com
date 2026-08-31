@@ -34,7 +34,7 @@ export const sampleQueries = [
       { name: "DevOps_Retrospective_Notes", type: "Notion" },
     ],
     answer:
-      "The primary bottleneck originated from connection pool saturation in auth-service during peak load. Upgrading Triton dynamic batching reduced API queue latency by 64%.",
+      "The primary bottleneck originated from connection pool saturation in auth service during peak load. Upgrading Triton dynamic batching reduced API queue latency by 64%.",
   },
   {
     id: "support",
@@ -47,7 +47,7 @@ export const sampleQueries = [
       { name: "Support_Playbook_Enterprise.pdf", type: "Knowledge Base" },
     ],
     answer:
-      "Navigate to Admin Console > Auth Settings, import Okta Metadata XML, set Entity ID to 'contekxtra-sso', and enforce Attribute Mapping for 'email' and 'groups'.",
+      "Navigate to Admin Console > Auth Settings, import Okta Metadata XML, set Entity ID to 'contekxtra sso', and enforce Attribute Mapping for 'email' and 'groups'.",
   },
 ];
 
@@ -84,14 +84,14 @@ export const coreCapabilities = [
     id: "role-aware",
     icon: "user-check",
     title: "Role-Aware Response Delivery",
-    desc: "Tailors response granularity to the user's role—delivering concise executive bullet points to leadership and deep code specs to engineers.",
+    desc: "Tailors response granularity to the user's rol delivering concise executive bullet points to leadership and deep code specs to engineers.",
     metric: "Role Adaptive",
   },
   {
     id: "security",
     icon: "lock",
     title: "Enterprise Governance & Security",
-    desc: "Bank-grade AES 256 encryption, SOC2 Type II compliance, self-hosted container deployment options, and granular RBAC enforcement.",
+    desc: "Bank-grade AES 256 encryption, SOC2 Type II compliance, self hosted container deployment options, and granular RBAC enforcement.",
     metric: "SOC2 & AES 256",
   },
 ];
@@ -102,7 +102,7 @@ export const useCases = [
     title: "Research & Legal Teams",
     tagline: "Synthesize thousands of pages into source-backed legal clarity",
     summary:
-      "Legal and research teams spend up to 40% of their day searching for precedents and cross-referencing contract clauses. ContekXtra C.1 analyzes contracts, policy documents, and research archives in seconds, highlighting clause conflicts and citing exact page numbers.",
+      "Legal and research teams spend up to 40% of their day searching for precedents and cross referencing contract clauses. ContekXtra C.1 analyzes contracts, policy documents, and research archives in seconds, highlighting clause conflicts and citing exact page numbers.",
     highlights: [
       "Instant multi-document clause comparison",
       "Automated regulatory compliance checks",
