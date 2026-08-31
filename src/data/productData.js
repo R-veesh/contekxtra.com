@@ -3,7 +3,7 @@ export const productInfo = {
   version: "vC.1 Enterprise Release",
   tagline: "Neural Context & Enterprise Intelligence Engine",
   heroSubtitle:
-    "Transform fragmented enterprise data into unified, actionable intelligence. Automate discovery, bridge organizational knowledge silos, and empower teams with source-grounded answers at sub-second speeds.",
+    "Transform fragmented enterprise data into unified, actionable intelligence. Automate discovery, bridge organizational knowledge silos, and empower teams with source-grounded answers at sub second speeds.",
   liveAppUrl: "https://app.contekxtra.com",
 };
 
@@ -176,8 +176,8 @@ export const technicalDetailsNvidia = [
     category: "Generative AI & Language NIMs",
     tag: "Inference Engine",
     description:
-      "Generative AI and language-focused inference microservices. Pre-built, hardware-optimized containers with standardized APIs to deploy and scale the Knowledge Assistant and semantic reasoning pipelines, ensuring sub-second response times across distributed enterprise departments.",
-    badge: "Sub-Second Microservices",
+      "Generative AI and language-focused inference microservices. Pre-built, hardware-optimized containers with standardized APIs to deploy and scale the Knowledge Assistant and semantic reasoning pipelines, ensuring sub second response times across distributed enterprise departments.",
+    badge: "sub second Microservices",
   },
   {
     id: "rapids",
@@ -220,9 +220,9 @@ export const pipelineSteps = [
   },
   {
     step: "04",
-    title: "Sub-Second Generative Synthesis",
+    title: "sub second Generative Synthesis",
     tech: "NVIDIA NIM & Triton Server",
-    desc: "Generates source-cited, context-grounded answers through hardware-optimized containers with sub-second latency.",
+    desc: "Generates source-cited, context-grounded answers through hardware-optimized containers with sub second latency.",
   },
 ];
 
