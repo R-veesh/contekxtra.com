@@ -20,7 +20,7 @@ export const sampleQueries = [
       { name: "Infra_Security_Policy#L142", type: "Confluence" },
     ],
     answer:
-      "All primary EU customer PII must reside within the Frankfurt (eu-central-1) region. Cross-border replications require AES-256 tokenization and explicit DPA authorization prior to deployment.",
+      "All primary EU customer PII must reside within the Frankfurt (eu central 1) region. Cross-border replications require AES 256 tokenization and explicit DPA authorization prior to deployment.",
   },
   {
     id: "engineering",
@@ -91,8 +91,8 @@ export const coreCapabilities = [
     id: "security",
     icon: "lock",
     title: "Enterprise Governance & Security",
-    desc: "Bank-grade AES-256 encryption, SOC2 Type II compliance, self-hosted container deployment options, and granular RBAC enforcement.",
-    metric: "SOC2 & AES-256",
+    desc: "Bank-grade AES 256 encryption, SOC2 Type II compliance, self-hosted container deployment options, and granular RBAC enforcement.",
+    metric: "SOC2 & AES 256",
   },
 ];
 
