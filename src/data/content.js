@@ -300,17 +300,17 @@ export const footerColumns = [
   {
     title: "Platform",
     links: [
-      { label: "Capabilities", href: "#capabilities" },
-      { label: "Architecture", href: "#pipeline" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Documentation", href: "#documentation" },
+      { label: "Capabilities", href: "/#capabilities" },
+      { label: "Architecture", href: "/#pipeline" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "Documentation", href: "/#documentation" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Contact Sales", href: "#contact" },
-      { label: "About Us", href: "#platform" },
+      { label: "Contact Sales", href: "/#contact" },
+      { label: "About Us", href: "/#platform" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
