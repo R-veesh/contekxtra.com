@@ -256,7 +256,7 @@ export default function Product() {
                   Powered by NVIDIA Accelerated Computing
                 </h2>
                 <p style={{ color: "rgba(255, 255, 255, 0.72)", maxWidth: "56ch", marginTop: "16px", fontSize: "1.1rem" }}>
-                  ContekXtra C.1 integrates NVIDIA's enterprise AI microservices and GPU-accelerated SDKs to deliver sub-second response times and real-time context mapping.
+                  ContekXtra C.1 integrates NVIDIA's enterprise AI microservices and GPU-accelerated SDKs to deliver sub second response times and real time context mapping.
                 </p>
               </Reveal>
 
@@ -393,7 +393,7 @@ export default function Product() {
                     {"{ Get Started Today }"}
                   </span>
                   <h2 className="product-cta-banner__title">
-                    Unlock Sub-Second Enterprise Context Intelligence
+                    Unlock sub second Enterprise Context Intelligence
                   </h2>
                   <p className="product-cta-banner__desc">
                     Experience ContekXtra C.1 in action or connect with our enterprise architecture team for a tailored demo.
